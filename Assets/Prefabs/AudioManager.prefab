@@ -44,4 +44,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea22ba441d333e4d9d34c3940627f80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioFiles: []
+  audioFiles:
+  - audioName: ButtonHover
+    audioClip: {fileID: 8300000, guid: 12a714975318c2e4db876b1f94d6a0f2, type: 3}
+    volume: 1
+    pitchVariation: 0
+    source: {fileID: 0}
+  - audioName: ButtonSelect
+    audioClip: {fileID: 8300000, guid: 73a34a90e628a184ba8cef6c3c5b016a, type: 3}
+    volume: 1
+    pitchVariation: 0
+    source: {fileID: 0}
+  - audioName: ItemPickup
+    audioClip: {fileID: 8300000, guid: 8bede27da09980343bec1d8ab06549dd, type: 3}
+    volume: 1
+    pitchVariation: 0
+    source: {fileID: 0}

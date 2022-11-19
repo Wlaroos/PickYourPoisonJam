@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using EZCameraShake;
+using DG.Tweening;
 
 public class PrisonController : MonoBehaviour
 {
+    public Transform camTransform;
     public GameObject prisonFloor;
     public Sprite prisonFloorRubbleSprite;
     public GameObject prisonWall;
     public GameObject prisonWallBroken;
     public GameObject flashImage;
 
-    void Update(){
-
+    void Start(){
+        
     }
 
     public void BreakWall(){
@@ -21,17 +23,24 @@ public class PrisonController : MonoBehaviour
         prisonFloor.GetComponent<SpriteRenderer>().sprite = prisonFloorRubbleSprite;
         flashImage.GetComponent<Animator>().Play("Flash");
         CameraShaker.Instance.ShakeOnce(5f,6f,0.1f,1f);
+        AudioManager.PlaySound("Explosion");
     }
 
     public void BehindWall(){
         //Player Sorting layer behind wall
+        TweenCamera(camTransform,10.7f);
     }
 
     public void InFrontOfWall(){
-        //Player Sorting layer in front of wall
+        TweenCamera(camTransform,0f);
     }
 
     public void OnTriggerEnter2D(Collider other){
         //Detect when player behind wall
+    }
+
+    public void TweenCamera(Transform t,float yval){ //10,7f for top room, 0 for bottom
+        Sequence mySequence = DOTween.Sequence();
+        t.DOMove(new Vector3(0f,yval,-10f),0.9f).SetEase(Ease.InOutQuint);
     }
 }
