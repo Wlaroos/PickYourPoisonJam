@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6258911788969803020}
   - component: {fileID: 6258911788969803021}
+  - component: {fileID: 212558197910463441}
   m_Layer: 0
   m_Name: Item
   m_TagString: Item
@@ -170,3 +171,24 @@ MonoBehaviour:
   itemAnimation: {fileID: 6258911788914933421}
   weaponSprite: {fileID: 21300000, guid: 51148f575783e444399cc73d11eda82a, type: 3}
   pickupRadius: 0.6
+--- !u!50 &212558197910463441
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6258911788969803019}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

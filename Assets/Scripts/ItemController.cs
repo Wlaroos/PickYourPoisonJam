@@ -12,7 +12,7 @@ public class ItemController : MonoBehaviour
         gameObject.GetComponentInChildren<CircleCollider2D>().radius = pickupRadius;
         gameObject.GetComponentInChildren<SpriteRenderer>().sprite = weaponSprite;
     }
-    void OnTriggerEnter2D(Collider other){
+    void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Player"){
             Destroy(this.gameObject,0f);
             AudioManager.PlaySound("ItemPickup");

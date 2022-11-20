@@ -35,7 +35,7 @@ public class PrisonController : MonoBehaviour
         TweenCamera(camTransform,0f);
     }
 
-    public void OnTriggerEnter2D(Collider other){
+    public void OnTriggerEnter2D(Collider2D other){
         //Detect when player behind wall
     }
 
