@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class RotateHoverUtil : MonoBehaviour
 {
+    [SerializeField] bool usesLocalTime = true;
+    float localTime;
+
     [SerializeField] bool canRotate;
     [SerializeField] Vector3 degreesPerSecond = new Vector3(0f,0f,15f);
 
@@ -18,11 +21,22 @@ public class RotateHoverUtil : MonoBehaviour
 
     void Start()
     {
-        posOffset = transform.position;
+        posOffset = transform.localPosition;
+        localTime = Random.Range(0,1000);
+        frequency = Random.Range(frequency, frequency+.25f);
     }
 
     void Update()
     {
+        if(usesLocalTime)
+        {
+            localTime += Time.deltaTime;
+        }
+        else
+        {
+            localTime = Time.fixedTime;
+        }
+
         if (canRotate)
         {
             transform.Rotate(Time.deltaTime * degreesPerSecond, Space.Self);
@@ -31,9 +45,9 @@ public class RotateHoverUtil : MonoBehaviour
         if (canHover)
         {
             tempPos = posOffset;
-            tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+            tempPos.y += Mathf.Sin(localTime * Mathf.PI * frequency) * amplitude;
 
-            transform.position = tempPos;
+            transform.localPosition = tempPos;
         }
     }
 }
