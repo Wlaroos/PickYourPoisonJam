@@ -124,7 +124,7 @@ MonoBehaviour:
   _damage: 25
   _knockback: 10
   _size: 1
-  ps: {fileID: 0}
+  ps: {fileID: 6449988623046268236, guid: 9308e4a2aa4d7fa45b05fa83f514e4dc, type: 3}
 --- !u!58 &2522909605877136256
 CircleCollider2D:
   m_ObjectHideFlags: 0

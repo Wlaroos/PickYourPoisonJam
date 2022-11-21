@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using EZCameraShake;
 
 public class PlayerWeapon : MonoBehaviour
 {
@@ -79,6 +80,8 @@ public class PlayerWeapon : MonoBehaviour
         {
             if(Input.GetMouseButtonDown(0) && Time.time > _startFireTime + _fireDelay)
             {
+                AudioManager.PlaySound("Gunshot1");
+                CameraShaker.Instance.ShakeOnce(3f,2f,0.2f,0.2f);
                 gunEndPointPosition = shootTransform.position;
                 Transform bulletTransform = Instantiate(bulletRef.transform, gunEndPointPosition, Quaternion.identity);
                 Vector3 shootDir = (gunEndPointPosition - transform.position).normalized;

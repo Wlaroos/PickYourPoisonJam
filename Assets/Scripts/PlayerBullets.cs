@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class PlayerBullets : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class PlayerBullets : MonoBehaviour
     [SerializeField] private int _damage = 1;
     [SerializeField] private float _knockback = 3;
     [SerializeField] private float _size = 1;
-    [SerializeField] private ParticleSystem ps;
+    [SerializeField] private GameObject ps;
     private Rigidbody2D _rb;
 
     private void Awake()
@@ -40,8 +41,11 @@ public class PlayerBullets : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Wall")
+        if(collision.tag == "BulletBounds")
         { 
+            Instantiate(ps,transform.position,Quaternion.identity);
+            CameraShaker.Instance.ShakeOnce(2f,2f,0.2f,0.2f);
+            AudioManager.PlaySound("BulletCollide");
             Destroy(gameObject); 
         }
 
