@@ -60,3 +60,28 @@ MonoBehaviour:
     volume: 1
     pitchVariation: 0
     source: {fileID: 0}
+  - audioName: Explosion
+    audioClip: {fileID: 8300000, guid: 2672515facd58814394dce807dcb5227, type: 3}
+    volume: 1
+    pitchVariation: 0
+    source: {fileID: 0}
+  - audioName: Gunshot1
+    audioClip: {fileID: 8300000, guid: 519ed5e5574c4b1449e3117e8e76c7f7, type: 3}
+    volume: 1
+    pitchVariation: 0.05
+    source: {fileID: 0}
+  - audioName: Gunshot2
+    audioClip: {fileID: 8300000, guid: 5cfdf452bd394d440a4a82822f211f02, type: 3}
+    volume: 1
+    pitchVariation: 0.05
+    source: {fileID: 0}
+  - audioName: Gunshot3
+    audioClip: {fileID: 8300000, guid: b8a76c4c0f42ba14d829307a62fff58f, type: 3}
+    volume: 1
+    pitchVariation: 0.05
+    source: {fileID: 0}
+  - audioName: Gunshot4
+    audioClip: {fileID: 8300000, guid: 488cc60f3755eb647b479faa37f1da28, type: 3}
+    volume: 1
+    pitchVariation: 0.05
+    source: {fileID: 0}
