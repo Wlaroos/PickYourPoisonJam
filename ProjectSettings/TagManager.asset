@@ -60,3 +60,6 @@ TagManager:
   - name: Flash
     uniqueID: 3227763637
     locked: 0
+  - name: Particle
+    uniqueID: 1505197513
+    locked: 0

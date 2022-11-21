@@ -86,7 +86,7 @@ MonoBehaviour:
     pitchVariation: 0.05
     source: {fileID: 0}
   - audioName: CameraUp
-    audioClip: {fileID: 8300000, guid: a1aee80c1f711734cb98d674bff466f5, type: 3}
+    audioClip: {fileID: 8300000, guid: 671be692bfbb43344bd5744be54160f8, type: 3}
     volume: 1
     pitchVariation: 0.02
     source: {fileID: 0}
