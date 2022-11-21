@@ -64,7 +64,7 @@ public class PlayerWeapon : MonoBehaviour
 
             // Gun Knockback (Broken rn)
             //transform.GetComponentInChildren<Rigidbody2D>().AddForce(shootDir * 250);
-            _rb.AddForce(-shootDir * 250);
+            //_rb.AddForce(-shootDir * 250);
             //transform.GetChild(0).GetComponent<Rigidbody2D>().AddTorque(50);
 
 
