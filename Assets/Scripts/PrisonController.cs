@@ -13,6 +13,8 @@ public class PrisonController : MonoBehaviour
     public GameObject prisonWallBroken;
     public GameObject flashImage;
 
+    public bool behindWall = false;
+
     void Start(){
         
     }
@@ -27,7 +29,6 @@ public class PrisonController : MonoBehaviour
     }
 
     public void BehindWall(){
-        //Player Sorting layer behind wall
         TweenCamera(camTransform,10.7f);
     }
 
