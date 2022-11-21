@@ -709,6 +709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletRef: {fileID: 827692325111025405, guid: 075ddce282a208c49828e841b0761f2f, type: 3}
+  shootTransform: {fileID: 0}
   _isAuto: 0
   _fireDelay: 0.75
 --- !u!1 &5712289283290149105
@@ -721,6 +722,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5712289283290149106}
   - component: {fileID: 5712289283290149004}
+  - component: {fileID: 834576813860478623}
+  - component: {fileID: 9059531617974898099}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -795,6 +798,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &834576813860478623
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5712289283290149105}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &9059531617974898099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5712289283290149105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ced91c3a79dc034aa6e2c3566c05aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _metersPerSecond: 5
+  _degreesPerSecond: 15
 --- !u!1 &5712289283492187592
 GameObject:
   m_ObjectHideFlags: 0
