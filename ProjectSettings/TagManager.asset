@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Item
   - Wall
+  - Bullet
+  - BulletBounds
   layers:
   - Default
   - TransparentFX

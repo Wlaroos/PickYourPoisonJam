@@ -95,3 +95,8 @@ MonoBehaviour:
     volume: 1
     pitchVariation: 0.02
     source: {fileID: 0}
+  - audioName: BulletCollide
+    audioClip: {fileID: 8300000, guid: d9982fd6c643090409206a276777eace, type: 3}
+    volume: 1
+    pitchVariation: 0.1
+    source: {fileID: 0}

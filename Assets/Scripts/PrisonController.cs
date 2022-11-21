@@ -40,4 +40,6 @@ public class PrisonController : MonoBehaviour
         Sequence mySequence = DOTween.Sequence();
         t.DOMove(new Vector3(0f,yval,-10f),0.9f).SetEase(Ease.InOutQuint);
     }
+
+    
 }
