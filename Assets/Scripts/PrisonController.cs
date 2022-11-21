@@ -35,10 +35,6 @@ public class PrisonController : MonoBehaviour
         TweenCamera(camTransform,0f);
     }
 
-    public void OnTriggerEnter2D(Collider2D other){
-        //Detect when player behind wall
-    }
-
     public void TweenCamera(Transform t,float yval){ //10,7f for top room, 0 for bottom
         Sequence mySequence = DOTween.Sequence();
         t.DOMove(new Vector3(0f,yval,-10f),0.9f).SetEase(Ease.InOutQuint);
