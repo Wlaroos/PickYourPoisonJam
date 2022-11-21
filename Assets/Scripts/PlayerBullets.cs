@@ -22,7 +22,7 @@ public class PlayerBullets : MonoBehaviour
         Destroy(gameObject, 8.0f);
     }
 
-    public void BulletSetup(Vector3 shootDir, float shotSpeed, int damage, float knockback, float size)
+    public void BulletSetup(Vector3 shootDir, float angle, float shotSpeed, int damage, float knockback, float size)
     {
         _shotSpeed = shotSpeed;
         _damage = damage;
@@ -31,6 +31,9 @@ public class PlayerBullets : MonoBehaviour
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         transform.localScale = new Vector3(_size, _size, _size);
+
+        transform.eulerAngles = new Vector3(0, 0, angle);
+
         float vel = _shotSpeed;
         rb.AddForce(shootDir * vel, ForceMode2D.Impulse);
     }

@@ -10,8 +10,11 @@ public class ReorientGun : MonoBehaviour
     [SerializeField] float _metersPerSecond;
     [SerializeField] float _degreesPerSecond;
 
+    //Rigidbody2D _rb;
+
     private void Awake()
     {
+        //_rb = GetComponent<Rigidbody2D>();
         _defaultPos = transform.localPosition;
         _defaultRot = transform.localRotation;
     }
@@ -19,6 +22,7 @@ public class ReorientGun : MonoBehaviour
     private void Update()
     {
 
+/*       
         if (!Mathf.Approximately(transform.localPosition.x, _defaultPos.x) && !Mathf.Approximately(transform.localPosition.y, _defaultPos.y))
         {
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, _defaultPos, _metersPerSecond * Time.deltaTime);
@@ -28,7 +32,10 @@ public class ReorientGun : MonoBehaviour
         {
             transform.localRotation = Quaternion.RotateTowards(transform.localRotation, _defaultRot, _degreesPerSecond * Time.deltaTime);
         }
+*/
 
+        transform.localPosition = Vector3.MoveTowards(transform.localPosition, _defaultPos, _metersPerSecond * Time.fixedDeltaTime);
+        transform.localRotation = Quaternion.RotateTowards(transform.localRotation, _defaultRot, _degreesPerSecond * Time.deltaTime);
     }
 
 }

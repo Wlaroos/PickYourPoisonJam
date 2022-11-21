@@ -3152,6 +3152,7 @@ MonoBehaviour:
   prisonWall: {fileID: 574480068}
   prisonWallBroken: {fileID: 720433565}
   flashImage: {fileID: 1760647470}
+  behindWall: 0
 --- !u!1001 &1167689651292690015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3159,6 +3160,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 834576813860478623, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 834576813860478623, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 834576813860478623, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794957267229837157, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526083015131262351, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527963194227100351, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527963194227100351, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527963194227100351, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5712289283290149106, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 5712289284503277416, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -3206,6 +3243,14 @@ PrefabInstance:
     - target: {fileID: 5712289284503277423, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9059531617974898099, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9059531617974898099, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
+      propertyPath: _metersPerSecond
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}

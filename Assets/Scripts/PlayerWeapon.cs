@@ -53,22 +53,49 @@ public class PlayerWeapon : MonoBehaviour
 
     private void Shoot()
     {
-        if ((_isAuto && Input.GetMouseButton(0) && Time.time > _fireDelay + _startFireTime) || (!_isAuto && Input.GetMouseButtonDown(0) && Time.time > _startFireTime + _fireDelay))
+        if (_isAuto)
         {
-            gunEndPointPosition = shootTransform.position;
-            Transform bulletTransform = Instantiate(bulletRef.transform, gunEndPointPosition, Quaternion.identity);
-            Vector3 shootDir = (gunEndPointPosition - transform.position).normalized;
-            bulletTransform.GetComponent<PlayerBullets>().BulletSetup(shootDir, 20,1,3,1);
-            // Audio
-            // Camera Shake
+            if (Input.GetMouseButton(0) && Time.time > _fireDelay + _startFireTime)
+            {
+                gunEndPointPosition = shootTransform.position;
+                Transform bulletTransform = Instantiate(bulletRef.transform, gunEndPointPosition, Quaternion.identity);
+                Vector3 shootDir = (gunEndPointPosition - transform.position).normalized;
 
-            // Gun Knockback (Broken rn)
-            //transform.GetComponentInChildren<Rigidbody2D>().AddForce(shootDir * 250);
-            //_rb.AddForce(-shootDir * 250);
-            //transform.GetChild(0).GetComponent<Rigidbody2D>().AddTorque(50);
+                Vector3 aimDir = (mousePos - transform.position).normalized;
+                float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
 
+                bulletTransform.GetComponent<PlayerBullets>().BulletSetup(shootDir, angle, 20, 1, 3, 1);
 
-            _startFireTime = Time.time;
+                // Audio
+                // Camera Shake
+
+                // Recoil (Broken)
+                //_rb.AddForce(-shootDir * 250);
+
+                _startFireTime = Time.time;
+            }
+        }
+        else
+        {
+            if(Input.GetMouseButtonDown(0) && Time.time > _startFireTime + _fireDelay)
+            {
+                gunEndPointPosition = shootTransform.position;
+                Transform bulletTransform = Instantiate(bulletRef.transform, gunEndPointPosition, Quaternion.identity);
+                Vector3 shootDir = (gunEndPointPosition - transform.position).normalized;
+
+                Vector3 aimDir = (mousePos - transform.position).normalized;
+                float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
+
+                bulletTransform.GetComponent<PlayerBullets>().BulletSetup(shootDir, angle, 20, 1, 3, 1);
+
+                // Audio
+                // Camera Shake
+
+                // Recoil (Broken)
+                //_rb.AddForce(-shootDir * 250);
+
+                _startFireTime = Time.time;
+            }
         }
     }
 }
