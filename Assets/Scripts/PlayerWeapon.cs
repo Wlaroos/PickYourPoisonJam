@@ -63,7 +63,10 @@ public class PlayerWeapon : MonoBehaviour
             // Camera Shake
 
             // Gun Knockback (Broken rn)
-            //_rb.AddForce(-shootDir * 250);
+            //transform.GetComponentInChildren<Rigidbody2D>().AddForce(shootDir * 250);
+            _rb.AddForce(-shootDir * 250);
+            //transform.GetChild(0).GetComponent<Rigidbody2D>().AddTorque(50);
+
 
             _startFireTime = Time.time;
         }
