@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class RotateHoverUtil : MonoBehaviour
 {
-    [SerializeField] bool usesLocalTime = true;
-    float localTime;
+    [SerializeField] private bool usesLocalTime = true;
+    private float localTime;
 
-    [SerializeField] bool canRotate;
-    [SerializeField] Vector3 degreesPerSecond = new Vector3(0f,0f,15f);
+    [SerializeField] private bool canRotate;
+    [SerializeField] private Vector3 degreesPerSecond = new Vector3(0f,0f,15f);
 
-    [SerializeField] bool canHover;
+    [SerializeField] private bool canHover;
     // Amount the object will go up and down. Range of movement is (position - amplitude) to (position + amplitude)
-    [SerializeField] float amplitude = 0.5f;
+    [SerializeField] private float amplitude = 0.5f;
     // Time needed for one full cycle
-    [SerializeField] float frequency = 1f;
+    [SerializeField] private float frequency = 1f;
 
-    Vector3 posOffset = new Vector3();
-    Vector3 tempPos = new Vector3();
+    private Vector3 posOffset = new Vector3();
+    private Vector3 tempPos = new Vector3();
 
     void Start()
     {

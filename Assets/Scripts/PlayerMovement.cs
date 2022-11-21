@@ -5,14 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    Vector2 _input;
-    Vector2 _dampedInput;
-    Vector2 _currentVelocity;
+    private Vector2 _input;
+    private Vector2 _dampedInput;
+    private Vector2 _currentVelocity;
 
-    Rigidbody2D _rb;
+    private Rigidbody2D _rb;
 
-    [SerializeField] float _moveSpeed = 5f;
-    [SerializeField] float _smoothSpeed = 0.2f;
+    [SerializeField] private float _moveSpeed = 5f;
+    [SerializeField] private float _smoothSpeed = 0.2f;
 
     private void Awake()
     {

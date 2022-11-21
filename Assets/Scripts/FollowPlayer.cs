@@ -5,13 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class FollowPlayer : MonoBehaviour
 {
-    Rigidbody2D _playerRB;
+    private Rigidbody2D _playerRB;
 
-    [SerializeField] float _followDistance;
-    [SerializeField] float _distCheck;
-    float _tempFollowDistance;
+    [SerializeField] private float _followDistance;
+    [SerializeField] private float _distCheck;
+    private float _tempFollowDistance;
 
-    Rigidbody2D _rb;
+    private bool isFollowing = true;
+
+    private Rigidbody2D _rb;
 
     void Awake()
     {
@@ -22,7 +24,10 @@ public class FollowPlayer : MonoBehaviour
 
     void Update()
     {
-        Follow();
+        if (isFollowing)
+        {
+            Follow();
+        }
     }
 
     void Follow()
