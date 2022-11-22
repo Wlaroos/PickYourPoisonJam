@@ -6,6 +6,8 @@ using EZCameraShake;
 
 public class PlayerWeapon : MonoBehaviour
 {
+    public event Action Fired = delegate {};
+
     [SerializeField] private GameObject bulletRef;
 
     private Vector3 gunEndPointPosition;
@@ -100,5 +102,8 @@ public class PlayerWeapon : MonoBehaviour
         transform.GetChild(0).localRotation = (Quaternion.Euler(0,0,30));
 
         _startFireTime = Time.time;
+
+        // Event
+        Fired?.Invoke();
     }
 }

@@ -3302,6 +3302,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8279960254541709462, guid: 63453acefd4b9214f9ea5b37a39b1f4a, type: 3}
+      propertyPath: _scaleTo
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279960254541709462, guid: 63453acefd4b9214f9ea5b37a39b1f4a, type: 3}
+      propertyPath: _degreesPerSecond
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 8279960254541709463, guid: 63453acefd4b9214f9ea5b37a39b1f4a, type: 3}
       propertyPath: m_Name
       value: Crosshair
