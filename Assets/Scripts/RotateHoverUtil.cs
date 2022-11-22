@@ -13,13 +13,17 @@ public class RotateHoverUtil : MonoBehaviour
     [SerializeField] private bool canHover;
     // Amount the object will go up and down. Range of movement is (position - amplitude) to (position + amplitude)
     [SerializeField] private float amplitude = 0.5f;
+    public float Amplitude => amplitude;
     // Time needed for one full cycle
     [SerializeField] private float frequency = 1f;
 
     private Vector3 posOffset = new Vector3();
     private Vector3 tempPos = new Vector3();
 
-    void Start()
+    private float _sine;
+    public float Sine => _sine;
+
+    void Awake()
     {
         posOffset = transform.localPosition;
         localTime = Random.Range(0,1000);
@@ -45,7 +49,9 @@ public class RotateHoverUtil : MonoBehaviour
         if (canHover)
         {
             tempPos = posOffset;
-            tempPos.y += Mathf.Sin(localTime * Mathf.PI * frequency) * amplitude;
+
+            _sine = Mathf.Sin(localTime * Mathf.PI * frequency);
+            tempPos.y += (_sine * amplitude);
 
             transform.localPosition = tempPos;
         }

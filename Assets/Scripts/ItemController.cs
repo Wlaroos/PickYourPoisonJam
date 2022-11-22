@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemController : MonoBehaviour
 {
-    public Animator itemAnimation;
+    //public Animator itemAnimation;
     public Sprite weaponSprite;
     public float pickupRadius;
 
