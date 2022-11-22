@@ -1662,22 +1662,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
-    - target: {fileID: 4680525838793809173, guid: 1e935911179d1e249b644b1456b98e3a, type: 3}
-      propertyPath: audioFiles.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680525838793809173, guid: 1e935911179d1e249b644b1456b98e3a, type: 3}
-      propertyPath: audioFiles.Array.data[3].volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680525838793809173, guid: 1e935911179d1e249b644b1456b98e3a, type: 3}
-      propertyPath: audioFiles.Array.data[3].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 2672515facd58814394dce807dcb5227, type: 3}
-    - target: {fileID: 4680525838793809173, guid: 1e935911179d1e249b644b1456b98e3a, type: 3}
-      propertyPath: audioFiles.Array.data[3].audioName
-      value: Explosion
-      objectReference: {fileID: 0}
     - target: {fileID: 6644768447241031727, guid: 1e935911179d1e249b644b1456b98e3a, type: 3}
       propertyPath: m_RootOrder
       value: 4

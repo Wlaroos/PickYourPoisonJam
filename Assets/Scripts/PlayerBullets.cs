@@ -20,7 +20,7 @@ public class PlayerBullets : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, 8.0f);
+        Destroy(gameObject, 4.0f);
     }
 
     public void BulletSetup(Vector3 shootDir, float angle, float shotSpeed, int damage, float knockback, float size)

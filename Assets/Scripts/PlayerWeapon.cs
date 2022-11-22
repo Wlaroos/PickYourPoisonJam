@@ -25,7 +25,11 @@ public class PlayerWeapon : MonoBehaviour
 
     private void Awake()
     {
-        ci = GameObject.Find("Labyrinth").GetComponent<ColorInversion>();
+        if (GameObject.Find("Labyrinth") != null)
+        {
+            ci = GameObject.Find("Labyrinth").GetComponent<ColorInversion>();
+        }
+
         _rb = GetComponent<Rigidbody2D>();
     }
 
@@ -76,7 +80,7 @@ public class PlayerWeapon : MonoBehaviour
 
     private void Shoot()
     {
-        ci.Flash();
+        ci?.Flash();
         AudioManager.PlaySound("Gunshot1");
         CameraShaker.Instance.ShakeOnce(3f, 2f, 0.2f, 0.2f);
         gunEndPointPosition = shootTransform.position;
@@ -91,8 +95,9 @@ public class PlayerWeapon : MonoBehaviour
         // Audio
         // Camera Shake
 
-        // Recoil (Broken)
-        //_rb.AddForce(-shootDir * 250);
+        // Recoil
+        transform.GetChild(0).position = transform.GetChild(0).position += (-shootDir * 0.75f);
+        transform.GetChild(0).localRotation = (Quaternion.Euler(0,0,30));
 
         _startFireTime = Time.time;
     }
