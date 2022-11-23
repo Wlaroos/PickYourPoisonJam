@@ -17,9 +17,10 @@ public class LabyrinthWeapon : MonoBehaviour
     [SerializeField] private bool _isAuto;
     [SerializeField] private float _fireDelay;
     private float _startFireTime;
-
+    public bool flash;
+    
     private Rigidbody2D _rb;
-
+    public float size;
 
     private ColorInversion ci;
 
@@ -69,7 +70,7 @@ public class LabyrinthWeapon : MonoBehaviour
                 Vector3 aimDir = (mousePos - transform.position).normalized;
                 float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
 
-                bulletTransform.GetComponent<PlayerBullets>().BulletSetup(shootDir, angle, 20, 1, 3, 1);
+                bulletTransform.GetComponent<PlayerBullets>().BulletSetup(shootDir, angle, 20, 1, 3, size);
 
                 // Audio
                 // Camera Shake
@@ -84,8 +85,9 @@ public class LabyrinthWeapon : MonoBehaviour
         {
             if(Input.GetMouseButtonDown(0) && Time.time > _startFireTime + _fireDelay)
             {
-                ci.Flash();
-                AudioManager.PlaySound("Gunshot1");
+                if(flash)
+                    ci.Flash();
+                AudioManager.PlaySound("OrbFire");
                 CameraShaker.Instance.ShakeOnce(3f,2f,0.2f,0.2f);
                 gunEndPointPosition = shootTransform.position;
                 Transform bulletTransform = Instantiate(bulletRef.transform, gunEndPointPosition, Quaternion.identity);
@@ -94,7 +96,9 @@ public class LabyrinthWeapon : MonoBehaviour
                 Vector3 aimDir = (mousePos - transform.position).normalized;
                 float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
 
-                bulletTransform.GetComponent<PlayerBullets>().BulletSetup(shootDir, angle, 20, 1, 3, 1);
+                bulletTransform.GetComponent<PlayerBullets>().BulletSetup(shootDir, angle, 20, 1, 3, size);
+                gameObject.GetComponent<Animator>().Play("WeaponGrow",-1,0);
+                
 
                 // Audio
                 // Camera Shake
@@ -105,5 +109,9 @@ public class LabyrinthWeapon : MonoBehaviour
                 _startFireTime = Time.time;
             }
         }
+    }
+
+    public void PlayGrow(){
+        AudioManager.PlaySound("OrbGrow");
     }
 }

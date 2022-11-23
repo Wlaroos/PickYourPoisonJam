@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ColorInversion : MonoBehaviour
 {
-    public SpriteRenderer[] sceneSprite;
+    public GameObject[] sceneSprite;
     [SerializeField] private Color lerpColorScene = Color.white;
 
     public SpriteRenderer floorSprite;
@@ -29,10 +29,10 @@ public class ColorInversion : MonoBehaviour
             for(int i = 0; i < sceneSprite.Length; i++){
                 if(timeElapsed < lerpSceneDuration){
                     if(sceneSprite != null)
-                    sceneSprite[i].color = Color.Lerp(sceneSprite[i].color,Color.white,timeElapsed/lerpSceneDuration);
+                    sceneSprite[i].GetComponent<SpriteRenderer>().color = Color.Lerp(sceneSprite[i].GetComponent<SpriteRenderer>().color,Color.white,timeElapsed/lerpSceneDuration);
                 }
                 else
-                    sceneSprite[i].color = Color.white;
+                    sceneSprite[i].GetComponent<SpriteRenderer>().color = Color.white;
             }
         }
         
@@ -62,7 +62,7 @@ public class ColorInversion : MonoBehaviour
         lerpColorCharacter = Color.black;
         lerpColorFloor = Color.white;
         for(int i = 0; i < sceneSprite.Length; i++){
-                sceneSprite[i].color = lerpColorScene;
+                sceneSprite[i].GetComponent<SpriteRenderer>().color = lerpColorScene;
             }
         for(int i = 0; i < characterSprite.Length; i++){
                 characterSprite[i].color = lerpColorCharacter;

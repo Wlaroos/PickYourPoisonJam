@@ -65,9 +65,12 @@ public class PlayerBullets : MonoBehaviour
             Instantiate(ps,transform.position,Quaternion.identity);
         }
             CameraShaker.Instance.ShakeOnce(2f,2f,0.2f,0.2f);
-            AudioManager.PlaySound("BulletCollide");
-        if(LabyrinthBullet)
+            
+        if(LabyrinthBullet){
             ci.Flash();
+            AudioManager.PlaySound("OrbExplode");
+        }
+        else AudioManager.PlaySound("BulletCollide");
         Destroy(gameObject); 
     }   
 

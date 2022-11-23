@@ -28,9 +28,9 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _Magnification: -0.11
-    - _Size: -0.05
-    - _Speed: 0.5
+    - _Magnification: 0.22
+    - _Size: 0.16
+    - _Speed: 0.41
     m_Colors:
     - _FocalPoint: {r: 0.5, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []

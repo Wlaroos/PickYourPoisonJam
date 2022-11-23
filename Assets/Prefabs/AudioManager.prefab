@@ -100,3 +100,18 @@ MonoBehaviour:
     volume: 1
     pitchVariation: 0.1
     source: {fileID: 0}
+  - audioName: OrbGrow
+    audioClip: {fileID: 8300000, guid: 935b6a4b19fc27c4e8815283d8fc0131, type: 3}
+    volume: 1
+    pitchVariation: 0.1
+    source: {fileID: 0}
+  - audioName: OrbFire
+    audioClip: {fileID: 8300000, guid: 816fe2dfa016fe94aa507223e401ec4e, type: 3}
+    volume: 1
+    pitchVariation: 0.1
+    source: {fileID: 0}
+  - audioName: OrbExplode
+    audioClip: {fileID: 8300000, guid: e32319a8c80a6f2428680bd38cc339b5, type: 3}
+    volume: 1
+    pitchVariation: 0.2
+    source: {fileID: 0}
