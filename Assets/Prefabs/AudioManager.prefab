@@ -115,3 +115,13 @@ MonoBehaviour:
     volume: 1
     pitchVariation: 0.2
     source: {fileID: 0}
+  - audioName: EnemyExplode
+    audioClip: {fileID: 8300000, guid: ed6de610f41161e419935c37e3d1eb72, type: 3}
+    volume: 1
+    pitchVariation: 0.2
+    source: {fileID: 0}
+  - audioName: PillarDamage
+    audioClip: {fileID: 8300000, guid: 886237e8d62ede94aae16729ff633c76, type: 3}
+    volume: 1
+    pitchVariation: 0.1
+    source: {fileID: 0}

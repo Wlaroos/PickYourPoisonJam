@@ -11,7 +11,6 @@ public class LabyrinthController : MonoBehaviour
     public Sprite prisonFloorRubbleSprite;
     public GameObject prisonWall;
     public GameObject prisonWallBroken;
-    public GameObject flashImage;
 
     public Transform camMoveLocation;
     public Transform camMoveLocation2;
@@ -19,8 +18,9 @@ public class LabyrinthController : MonoBehaviour
     public float duration;
     public bool hasExitAction;
     public bool overridePos;
+
     void Start(){
-        
+      
     }
 
     public void TweenCamera(Transform t,Transform loc){ //10,7f for top room, 0 for bottom

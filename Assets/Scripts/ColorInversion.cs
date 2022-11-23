@@ -17,8 +17,11 @@ public class ColorInversion : MonoBehaviour
     [SerializeField] float lerpSceneDuration;
     [SerializeField] float lerpFloorDuration;
     [SerializeField] float lerpCharDuration;
+
+        public GameObject flashImage;
     
     void Start(){
+        flashImage.GetComponent<Animator>().Play("FlashFade");    
         Flash();
     }
     
