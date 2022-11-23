@@ -12,19 +12,29 @@ public class PlayerBullets : MonoBehaviour
     [SerializeField] private float _size = 1;
     [SerializeField] private GameObject ps;
     private Rigidbody2D _rb;
+    [SerializeField] private ColorInversion ci;
+
+    public bool LabyrinthBullet;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        
+        
     }
 
     private void Start()
     {
-        Destroy(gameObject, 8.0f);
+        StartCoroutine(DestroyBullet(8.0f));   
+        if(LabyrinthBullet)
+        StartCoroutine(DestroyBullet(0.7f));     
     }
 
     public void BulletSetup(Vector3 shootDir, float angle, float shotSpeed, int damage, float knockback, float size)
     {
+        if(LabyrinthBullet){
+                ci = GameObject.Find("Labyrinth").GetComponent<ColorInversion>();
+        }
         _shotSpeed = shotSpeed;
         _damage = damage;
         _knockback = knockback;
@@ -37,17 +47,29 @@ public class PlayerBullets : MonoBehaviour
 
         float vel = _shotSpeed;
         rb.AddForce(shootDir * vel, ForceMode2D.Impulse);
+
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
+    {   
         if(collision.tag == "BulletBounds")
         { 
+            StartCoroutine(DestroyBullet(0f));
+        }
+    }
+
+    public IEnumerator DestroyBullet(float delay){
+        yield return new WaitForSeconds(delay);
+        if(ps != null){
             Instantiate(ps,transform.position,Quaternion.identity);
+        }
             CameraShaker.Instance.ShakeOnce(2f,2f,0.2f,0.2f);
             AudioManager.PlaySound("BulletCollide");
-            Destroy(gameObject); 
-        }
+        if(LabyrinthBullet)
+            ci.Flash();
+        Destroy(gameObject); 
+    }   
 
         /* 
                 if (collision.GetComponent<Enemy>() != null && gameObject.name == "NormalBullet(Clone)")
@@ -64,4 +86,3 @@ public class PlayerBullets : MonoBehaviour
                 }
         */
     }
-}

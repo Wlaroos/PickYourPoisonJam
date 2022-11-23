@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using EZCameraShake;
 
-public class PlayerWeapon : MonoBehaviour
+public class LabyrinthWeapon : MonoBehaviour
 {
     [SerializeField] private GameObject bulletRef;
 
@@ -25,6 +25,7 @@ public class PlayerWeapon : MonoBehaviour
 
     private void Awake()
     {
+        ci = GameObject.Find("Labyrinth").GetComponent<ColorInversion>();
         _rb = GetComponent<Rigidbody2D>();
     }
 
@@ -83,6 +84,7 @@ public class PlayerWeapon : MonoBehaviour
         {
             if(Input.GetMouseButtonDown(0) && Time.time > _startFireTime + _fireDelay)
             {
+                ci.Flash();
                 AudioManager.PlaySound("Gunshot1");
                 CameraShaker.Instance.ShakeOnce(3f,2f,0.2f,0.2f);
                 gunEndPointPosition = shootTransform.position;
