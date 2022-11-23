@@ -24,10 +24,11 @@ public class ColorInversion : MonoBehaviour
     
     void Update()
     {
-        timeElapsed +=Time.deltaTime;
+        timeElapsed += Time.deltaTime;
         if(lerpColorScene != Color.white){
             for(int i = 0; i < sceneSprite.Length; i++){
                 if(timeElapsed < lerpSceneDuration){
+                    if(sceneSprite != null)
                     sceneSprite[i].color = Color.Lerp(sceneSprite[i].color,Color.white,timeElapsed/lerpSceneDuration);
                 }
                 else
@@ -46,6 +47,7 @@ public class ColorInversion : MonoBehaviour
         if(lerpColorCharacter != Color.white){
             for(int i = 0; i < characterSprite.Length; i++){
                 if(timeElapsed < lerpCharDuration){
+                    if(characterSprite != null)
                 characterSprite[i].color = Color.Lerp(characterSprite[i].color,Color.white,timeElapsed/lerpCharDuration);
             }
             else characterSprite[i].color = Color.white;
@@ -54,6 +56,7 @@ public class ColorInversion : MonoBehaviour
     }
 
     public void Flash(){
+        Debug.Log("flash");
         timeElapsed = 0;
         lerpColorScene = Color.black;
         lerpColorCharacter = Color.black;

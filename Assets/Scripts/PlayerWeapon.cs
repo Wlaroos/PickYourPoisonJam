@@ -76,9 +76,9 @@ public class PlayerWeapon : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && Time.time > _startFireTime + _fireDelay)
             {
                 Shoot();
-            }
-        }
     }
+        }
+            }
 
     private void Shoot()
     {
