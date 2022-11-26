@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1313574194697945381}
   - component: {fileID: 5814257937451778596}
   - component: {fileID: 3942840178962250202}
+  - component: {fileID: -7651008588665971548}
   m_Layer: 0
   m_Name: Bubbles
   m_TagString: Untagged
@@ -3855,9 +3856,9 @@ ParticleSystem:
   TriggerModule:
     enabled: 1
     serializedVersion: 2
-    inside: 2
+    inside: 0
     outside: 0
-    enter: 0
+    enter: 2
     exit: 0
     colliderQueryMode: 0
     radiusScale: 1
@@ -4873,3 +4874,15 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-7651008588665971548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373554619809227210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ca6c9c762bf8c4c885965df10db222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

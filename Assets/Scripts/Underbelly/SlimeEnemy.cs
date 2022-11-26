@@ -133,6 +133,8 @@ public class SlimeEnemy : MonoBehaviour
 
         _AIPath.maxSpeed = 0;
 
+        GetComponent<CircleCollider2D>().enabled = false;
+
         while (state == State.ExplodeState)
         {
             _sr.sprite = _explodeAnim[index];
