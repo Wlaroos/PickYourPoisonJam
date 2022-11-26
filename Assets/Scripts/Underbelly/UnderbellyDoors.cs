@@ -17,6 +17,8 @@ public class UnderbellyDoors : MonoBehaviour
     [SerializeField] ParticleSystem _lockPS;
     [SerializeField] ParticleSystem _finalBreakPS;
 
+    [SerializeField] AstarPath _pathfinder;
+
     bool _initial = false;
     bool _final = false;
 
@@ -55,6 +57,9 @@ public class UnderbellyDoors : MonoBehaviour
                 Instantiate(_initalBreakPS, transform.position, Quaternion.Euler(0,0,210));
                 Instantiate(_lockPS, transform.position, Quaternion.Euler(0,0,210));
                 Instantiate(_finalBreakPS, transform.position, Quaternion.Euler(0, 0, 60));
+
+                _pathfinder.Scan();
+
                 _final = true;
             }
         }
