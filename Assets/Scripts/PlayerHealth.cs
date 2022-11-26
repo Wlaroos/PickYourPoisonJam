@@ -15,25 +15,34 @@ public class PlayerHealth : MonoBehaviour
     private float _currentHealth;
     public float CurrentHealth => _currentHealth;
 
+    private float _DoT = 0;
+
     private void Awake()
     {
         _currentHealth = _maxHealth;
     }
 
-//   Testing
      private void Update()
     {
-        if(Input.GetKey(KeyCode.Z))
+        /*        
+                  if(Input.GetKey(KeyCode.Z))
+                {
+                    TakeDamage(.1f);
+                }
+                if (Input.GetKeyDown(KeyCode.X))
+                {
+                    Heal(5);
+                }
+                if (Input.GetKeyDown(KeyCode.C))
+                {
+                    ChangeMaxHealth(50);
+                }
+        */
+
+        if (_DoT > 0)
         {
-            TakeDamage(.1f);
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            Heal(5);
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            ChangeMaxHealth(50);
+            _currentHealth -= (_DoT * Time.deltaTime);
+            HealthChanged?.Invoke(_currentHealth);
         }
     }
 
@@ -74,5 +83,10 @@ public class PlayerHealth : MonoBehaviour
     {
         gameObject.SetActive(false);
         // Death Code
+    }
+
+    public void ChangeDOT(float amount)
+    {
+        _DoT += amount;
     }
 }

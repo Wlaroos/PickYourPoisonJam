@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class PoisonAOE : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] float _damage = 3;
+    [SerializeField] float _scale = 2;
+
+    private void Awake()
     {
-        
+        transform.localScale = Vector3.one * _scale;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if(collision.tag == "Player")
+        {
+            collision.GetComponent<PlayerHealth>().ChangeDOT(_damage);
+        }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            collision.GetComponent<PlayerHealth>().ChangeDOT(-_damage);
+        }
+    }
+
 }
