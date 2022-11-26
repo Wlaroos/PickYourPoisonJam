@@ -29,6 +29,7 @@ public class UnderbellyDoors : MonoBehaviour
         _triggerCollider = GetComponent<CircleCollider2D>();
         _sr = GetComponent<SpriteRenderer>();
         _currentHealth = _maxHealth;
+        _sr.sortingOrder = 0;
     }
 
     private void Update()
@@ -49,6 +50,7 @@ public class UnderbellyDoors : MonoBehaviour
         if (_currentHealth <= 0)
         {
             _sr.sprite = _sprites[2];
+            _sr.sortingOrder = 3;
 
             _boxCollider.enabled = false;
             _triggerCollider.enabled = false;
