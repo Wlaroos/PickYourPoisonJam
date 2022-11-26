@@ -43,6 +43,13 @@ public class PlayerHealth : MonoBehaviour
         if (_DoT > 0)
         {
             _currentHealth -= (_DoT * Time.deltaTime);
+
+            if (_currentHealth <= 0)
+            {
+                _currentHealth = 0;
+                Death();
+            }
+
             HealthChanged?.Invoke(_currentHealth);
         }
     }
@@ -56,7 +63,8 @@ public class PlayerHealth : MonoBehaviour
             _currentHealth = 0;
             Death();
         }
-            HealthChanged?.Invoke(_currentHealth);
+
+        HealthChanged?.Invoke(_currentHealth);
     }
 
     public void Heal(float amount)
