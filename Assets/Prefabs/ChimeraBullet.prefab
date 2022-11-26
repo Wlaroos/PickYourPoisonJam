@@ -123,8 +123,8 @@ MonoBehaviour:
   _shotSpeed: 5
   _damage: 25
   _knockback: 10
-  _size: 1
-  ps: {fileID: 6449988623046268236, guid: 9308e4a2aa4d7fa45b05fa83f514e4dc, type: 3}
+  _size: 2
+  ps: {fileID: 6449988623046268236, guid: a5d464307812ecc4b8ffcbc1fd47d146, type: 3}
   ci: {fileID: 0}
   LabyrinthBullet: 0
 --- !u!70 &4338113407321170383

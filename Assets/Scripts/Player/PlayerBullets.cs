@@ -14,6 +14,8 @@ public class PlayerBullets : MonoBehaviour
     private Rigidbody2D _rb;
     [SerializeField] private ColorInversion ci;
 
+    bool _once;
+
     public bool LabyrinthBullet;
 
     private void Awake()
@@ -53,8 +55,9 @@ public class PlayerBullets : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {   
-        if(collision.tag == "BulletBounds")
-        { 
+        if(collision.tag == "BulletBounds" && !_once)
+        {
+            _once = true;
             StartCoroutine(DestroyBullet(0f));
         }
     }
@@ -76,7 +79,11 @@ public class PlayerBullets : MonoBehaviour
 
     public void Destroy()
     {
-        StartCoroutine(DestroyBullet(0f));
+        if (!_once)
+        {
+            _once = true;
+            StartCoroutine(DestroyBullet(0f));
+        }
     }
 
     /* 

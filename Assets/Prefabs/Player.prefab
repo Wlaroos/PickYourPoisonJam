@@ -742,6 +742,7 @@ MonoBehaviour:
   shootTransform: {fileID: 1641638894}
   _isAuto: 0
   _fireDelay: 0.1
+  _bulletSize: 0.5
 --- !u!1 &5712289283290149105
 GameObject:
   m_ObjectHideFlags: 0

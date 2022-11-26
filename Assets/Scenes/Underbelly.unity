@@ -1953,6 +1953,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6200000, guid: 006569ba157735a4fad77fa9451e1ec9, type: 2}
     - target: {fileID: 3526083015131262351, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
+      propertyPath: _size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526083015131262351, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
       propertyPath: _isAuto
       value: 0
       objectReference: {fileID: 0}
@@ -1962,7 +1966,11 @@ PrefabInstance:
       objectReference: {fileID: 827692325111025405, guid: 4ab2607d17771ed45a424a933e48374b, type: 3}
     - target: {fileID: 3526083015131262351, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
       propertyPath: _fireDelay
-      value: 0.25
+      value: 0.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526083015131262351, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
+      propertyPath: _bulletSize
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5712289283290149004, guid: 7e0797e8533f0c347accde5b6f38a64b, type: 3}
       propertyPath: m_Sprite

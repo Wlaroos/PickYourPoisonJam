@@ -22,16 +22,10 @@ public class PlayerWeapon : MonoBehaviour
 
     private Rigidbody2D _rb;
 
-
-    private ColorInversion ci;
+    [SerializeField] private float _bulletSize;
 
     private void Awake()
     {
-        if (GameObject.Find("Labyrinth") != null)
-        {
-            ci = GameObject.Find("Labyrinth").GetComponent<ColorInversion>();
-        }
-
         _rb = GetComponent<Rigidbody2D>();
     }
 
@@ -82,7 +76,6 @@ public class PlayerWeapon : MonoBehaviour
 
     private void Shoot()
     {
-        ci?.Flash();
         AudioManager.PlaySound("Gunshot1");
         CameraShaker.Instance.ShakeOnce(3f, 2f, 0.2f, 0.2f);
         gunEndPointPosition = shootTransform.position;
@@ -92,7 +85,7 @@ public class PlayerWeapon : MonoBehaviour
         Vector3 aimDir = (mousePos - transform.position).normalized;
         float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
 
-        bulletTransform.GetComponent<PlayerBullets>().BulletSetup(shootDir, angle, 20, 1, 3, 0.5f);
+        bulletTransform.GetComponent<PlayerBullets>().BulletSetup(shootDir, angle, 20, 1, 3, _bulletSize);
 
         // Audio
         // Camera Shake
