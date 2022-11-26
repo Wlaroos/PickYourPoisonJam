@@ -14,6 +14,7 @@ public class UnderbellyDoors : MonoBehaviour
     private float _DoT = 0;
 
     [SerializeField] ParticleSystem _initalBreakPS;
+    [SerializeField] ParticleSystem _lockPS;
     [SerializeField] ParticleSystem _finalBreakPS;
 
     bool _initial = false;
@@ -52,6 +53,7 @@ public class UnderbellyDoors : MonoBehaviour
             if (_finalBreakPS != null && !_final)
             {
                 Instantiate(_initalBreakPS, transform.position, Quaternion.Euler(0,0,210));
+                Instantiate(_lockPS, transform.position, Quaternion.Euler(0,0,210));
                 Instantiate(_finalBreakPS, transform.position, Quaternion.Euler(0, 0, 60));
                 _final = true;
             }
