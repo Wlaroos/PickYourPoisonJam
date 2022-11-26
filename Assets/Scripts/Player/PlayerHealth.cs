@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -88,5 +89,15 @@ public class PlayerHealth : MonoBehaviour
     public void ChangeDOT(float amount)
     {
         _DoT += amount;
+        transform.GetChild(2).GetChild(0).GetComponent<TextMeshPro>().text = "x" + (int)(_DoT / 2);
+
+        if(_DoT <= 0)
+        {
+            transform.GetChild(2).gameObject.SetActive(false);
+        }
+        else
+        {
+            transform.GetChild(2).gameObject.SetActive(true);
+        }
     }
 }

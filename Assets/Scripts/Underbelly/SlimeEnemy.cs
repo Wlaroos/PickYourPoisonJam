@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using Pathfinding;
 
 public class SlimeEnemy : MonoBehaviour
@@ -81,6 +82,8 @@ public class SlimeEnemy : MonoBehaviour
         _animSpeed = 0.2f;
         _noDamage = true;
         _AIPath.maxSpeed = 0;
+
+        transform.GetChild(0).localPosition = new Vector2(transform.GetChild(0).localPosition.x, transform.GetChild(0).localPosition.y + 1.2f);
 
         while (state == State.GrowState)
         {
@@ -172,10 +175,12 @@ public class SlimeEnemy : MonoBehaviour
             if(playerTransform.position.x > transform.position.x)
             {
                 scale.x = Mathf.Abs(scale.x) * -1;
+                transform.GetChild(0).localScale = new Vector2(-1,1);
             }
             else
             {
                 scale.x = Mathf.Abs(scale.x);
+                transform.GetChild(0).localScale = new Vector2(1, 1);
             }
             transform.localScale = scale;
         }
@@ -221,6 +226,9 @@ public class SlimeEnemy : MonoBehaviour
         else if(other.tag == "Bullet" && !_dead && !_noDamage)
         {
             _DoT += _DoTAmount;
+            transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>().text = "x" + (int)(_DoT / 5);
+
             Invoke(nameof(Detox), _posionTime);
         }
     }
@@ -228,6 +236,13 @@ public class SlimeEnemy : MonoBehaviour
     void Detox()
     {
         _DoT -= _DoTAmount;
+
+        transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>().text = "x" + (int)(_DoT / 5);
+
+        if (_DoT <= 0)
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
     }
 
     private void Grow()

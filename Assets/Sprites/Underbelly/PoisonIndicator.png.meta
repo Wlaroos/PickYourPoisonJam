@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c3e0bdbe1ad85b741ac4b9eaa6cb2d56
+guid: 79f77b8c8e44537469320d65e01cfdf1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -114,91 +114,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Slime(Small)Walk_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 37
-        height: 28
-      alignment: 9
-      pivot: {x: 0.38, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3bd6a85afda585643b5b9cca0d05f55d
-      internalID: -1327048945
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slime(Small)Walk_1
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 0
-        width: 37
-        height: 28
-      alignment: 9
-      pivot: {x: 0.38, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 190c59b08158a7841983b0567aa1d190
-      internalID: 1706991735
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slime(Small)Walk_2
-      rect:
-        serializedVersion: 2
-        x: 76
-        y: 0
-        width: 37
-        height: 28
-      alignment: 9
-      pivot: {x: 0.38, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ae55097acf4c2c4c878c1a12267998c
-      internalID: 1279989873
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slime(Small)Walk_3
-      rect:
-        serializedVersion: 2
-        x: 114
-        y: 0
-        width: 37
-        height: 28
-      alignment: 9
-      pivot: {x: 0.38, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3dbfc8ec6b735e4bb445fd070235fc7
-      internalID: 1970590114
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -209,11 +125,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Slime(Small)Walk_1: 1706991735
-      Slime(Small)Walk_2: 1279989873
-      Slime(Small)Walk_0: -1327048945
-      Slime(Small)Walk_3: 1970590114
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

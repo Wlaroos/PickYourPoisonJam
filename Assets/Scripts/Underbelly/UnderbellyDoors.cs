@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UnderbellyDoors : MonoBehaviour
 {
@@ -60,6 +61,8 @@ public class UnderbellyDoors : MonoBehaviour
 
                 _pathfinder.Scan();
 
+                transform.GetChild(0).gameObject.SetActive(false);
+
                 _final = true;
             }
         }
@@ -70,6 +73,10 @@ public class UnderbellyDoors : MonoBehaviour
         if(collision.tag == "Bullet" && !_final)
         {
             _DoT += 10;
+
+            transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>().text = "x" + (int)(_DoT / 10);
+
             collision.GetComponent<PlayerBullets>().Destroy();
         }
     }

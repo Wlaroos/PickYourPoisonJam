@@ -5,7 +5,7 @@ using UnityEngine;
 public class PoisonAOE : MonoBehaviour
 {
     [SerializeField] float _damage = 3;
-    [SerializeField] float _scale = 2;
+    [SerializeField] float _scale = 10;
 
     private void Awake()
     {
