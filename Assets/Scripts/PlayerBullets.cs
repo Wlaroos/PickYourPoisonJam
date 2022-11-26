@@ -72,20 +72,25 @@ public class PlayerBullets : MonoBehaviour
         }
         else AudioManager.PlaySound("BulletCollide");
         Destroy(gameObject); 
-    }   
-
-        /* 
-                if (collision.GetComponent<Enemy>() != null && gameObject.name == "NormalBullet(Clone)")
-                {
-                    Instantiate(ps, transform.position, Quaternion.identity);
-                    collision.GetComponent<Enemy>().TakeDamage(_rb.velocity.normalized * _knockback, _damage);
-                    Destroy(gameObject);
-                }
-
-                if (collision.gameObject.layer == LayerMask.NameToLayer("Walls"))
-                {
-                    Instantiate(ps, transform.position, Quaternion.identity);
-                    Destroy(gameObject);
-                }
-        */
     }
+
+    public void Destroy()
+    {
+        StartCoroutine(DestroyBullet(0f));
+    }
+
+    /* 
+            if (collision.GetComponent<Enemy>() != null && gameObject.name == "NormalBullet(Clone)")
+            {
+                Instantiate(ps, transform.position, Quaternion.identity);
+                collision.GetComponent<Enemy>().TakeDamage(_rb.velocity.normalized * _knockback, _damage);
+                Destroy(gameObject);
+            }
+
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Walls"))
+            {
+                Instantiate(ps, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
+    */
+}
