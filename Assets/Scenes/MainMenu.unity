@@ -3224,8 +3224,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 95.5
-  m_fontSizeBase: 95.5
+  m_fontSize: 92
+  m_fontSizeBase: 92
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3788,11 +3788,11 @@ PrefabInstance:
     - target: {fileID: 6258911788969803021, guid: ed01ab9a65ea05b44a27bbc685ba6dfc, type: 3}
       propertyPath: title
       value: 
-      objectReference: {fileID: 670470271}
+      objectReference: {fileID: 1913319071}
     - target: {fileID: 6258911788969803021, guid: ed01ab9a65ea05b44a27bbc685ba6dfc, type: 3}
       propertyPath: titleCard
       value: 
-      objectReference: {fileID: 561858685}
+      objectReference: {fileID: 594788418}
     - target: {fileID: 6258911788969803021, guid: ed01ab9a65ea05b44a27bbc685ba6dfc, type: 3}
       propertyPath: flashImage
       value: 
@@ -3800,11 +3800,11 @@ PrefabInstance:
     - target: {fileID: 6258911788969803021, guid: ed01ab9a65ea05b44a27bbc685ba6dfc, type: 3}
       propertyPath: description
       value: 
-      objectReference: {fileID: 1940778747}
+      objectReference: {fileID: 192503247}
     - target: {fileID: 6258911788969803021, guid: ed01ab9a65ea05b44a27bbc685ba6dfc, type: 3}
       propertyPath: instruction
       value: 
-      objectReference: {fileID: 866533073}
+      objectReference: {fileID: 124085460}
     - target: {fileID: 6258911788969803021, guid: ed01ab9a65ea05b44a27bbc685ba6dfc, type: 3}
       propertyPath: levelToLoad
       value: Underbelly

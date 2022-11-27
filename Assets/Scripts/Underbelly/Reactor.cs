@@ -8,6 +8,10 @@ public class Reactor : MonoBehaviour
     [SerializeField] Transform _bar1;
     [SerializeField] Transform _bar2;
 
+    [SerializeField] BigWall wallRef;
+
+    [SerializeField] ParticleSystem explodeParticles;
+
     private Vector2 _scale;
 
     [SerializeField] private float _amountNeeded;
@@ -45,6 +49,8 @@ public class Reactor : MonoBehaviour
     void Explode()
     {
         // Add flash of white and open the next area
+        wallRef.Break();
+        Instantiate(explodeParticles, transform.position, Quaternion.Euler(0, 0, 0));
         Destroy(gameObject);
     }
 }
