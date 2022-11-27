@@ -63,7 +63,8 @@ public class UnderbellyDoors : MonoBehaviour
 
                 _pathfinder.Scan(_pathfinder.graphs);
 
-                transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = Color.clear;
+                transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>().color = Color.clear;
 
                 _final = true;
             }
@@ -76,7 +77,8 @@ public class UnderbellyDoors : MonoBehaviour
         {
             _DoT += 10;
 
-            transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>().color = Color.white;
             transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>().text = "x" + (int)(_DoT / 10);
 
             collision.GetComponent<PlayerBullets>().Destroy();

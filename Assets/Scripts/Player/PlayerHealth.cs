@@ -97,15 +97,20 @@ public class PlayerHealth : MonoBehaviour
     public void ChangeDOT(float amount)
     {
         _DoT += amount;
+
+        transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        transform.GetChild(2).GetChild(0).GetComponent<TextMeshPro>().color = Color.white;
         transform.GetChild(2).GetChild(0).GetComponent<TextMeshPro>().text = "x" + (int)(_DoT / 2);
 
         if(_DoT <= 0)
         {
-            transform.GetChild(2).gameObject.SetActive(false);
+            transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().color = Color.clear;
+            transform.GetChild(2).GetChild(0).GetComponent<TextMeshPro>().color = Color.clear;
         }
         else
         {
-            transform.GetChild(2).gameObject.SetActive(true);
+            transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            transform.GetChild(2).GetChild(0).GetComponent<TextMeshPro>().color = Color.white;
         }
     }
 }

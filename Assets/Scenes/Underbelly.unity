@@ -610,10 +610,6 @@ PrefabInstance:
       propertyPath: _pathfinder
       value: 
       objectReference: {fileID: 1550513326}
-    - target: {fileID: 5137943392566356603, guid: ade74197a0eafd94498fd0717ec34875, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5137943392566356607, guid: ade74197a0eafd94498fd0717ec34875, type: 3}
       propertyPath: m_Name
       value: WoodenDoor (4)
@@ -957,10 +953,6 @@ PrefabInstance:
       propertyPath: _pathfinder
       value: 
       objectReference: {fileID: 1550513326}
-    - target: {fileID: 5137943392566356603, guid: ade74197a0eafd94498fd0717ec34875, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5137943392566356607, guid: ade74197a0eafd94498fd0717ec34875, type: 3}
       propertyPath: m_Name
       value: WoodenDoor (3)
@@ -2272,7 +2264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3361765708322541977, guid: 1bda7497b6c66c14dabba85902d334ce, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3686736037238114691, guid: 1bda7497b6c66c14dabba85902d334ce, type: 3}
       propertyPath: m_text
@@ -4061,7 +4053,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1525372876
 Transform:
   m_ObjectHideFlags: 0
@@ -5101,6 +5093,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 983941376035088527, guid: ade74197a0eafd94498fd0717ec34875, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 983941376035088527, guid: ade74197a0eafd94498fd0717ec34875, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
+      objectReference: {fileID: 0}
     - target: {fileID: 5137943392566356600, guid: ade74197a0eafd94498fd0717ec34875, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -5149,10 +5149,6 @@ PrefabInstance:
       propertyPath: _pathfinder
       value: 
       objectReference: {fileID: 1550513326}
-    - target: {fileID: 5137943392566356603, guid: ade74197a0eafd94498fd0717ec34875, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5137943392566356607, guid: ade74197a0eafd94498fd0717ec34875, type: 3}
       propertyPath: m_Name
       value: WoodenDoor (1)
@@ -5342,7 +5338,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948537369}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.25, y: -0.28, z: -0.3025438}
+  m_LocalPosition: {x: 13.41, y: 2.64, z: -0.3025438}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5960,7 +5956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1972039285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6008,7 +6004,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972039284}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.509354, y: 13.5623665, z: 0.3025438}
+  m_LocalPosition: {x: -10.92, y: 13.59, z: 0.3025438}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6538,10 +6534,6 @@ PrefabInstance:
       propertyPath: _pathfinder
       value: 
       objectReference: {fileID: 1550513326}
-    - target: {fileID: 5137943392566356603, guid: ade74197a0eafd94498fd0717ec34875, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5137943392566356607, guid: ade74197a0eafd94498fd0717ec34875, type: 3}
       propertyPath: m_Name
       value: WoodenDoor (2)
@@ -6633,6 +6625,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 983941376035088527, guid: ade74197a0eafd94498fd0717ec34875, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 983941376035088527, guid: ade74197a0eafd94498fd0717ec34875, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
+      objectReference: {fileID: 0}
     - target: {fileID: 5137943392566356600, guid: ade74197a0eafd94498fd0717ec34875, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -6681,10 +6681,6 @@ PrefabInstance:
       propertyPath: _pathfinder
       value: 
       objectReference: {fileID: 1550513326}
-    - target: {fileID: 5137943392566356603, guid: ade74197a0eafd94498fd0717ec34875, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5137943392566356607, guid: ade74197a0eafd94498fd0717ec34875, type: 3}
       propertyPath: m_Name
       value: WoodenDoor
@@ -6704,7 +6700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3361765708322541977, guid: 1bda7497b6c66c14dabba85902d334ce, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4615962825450215045, guid: 1bda7497b6c66c14dabba85902d334ce, type: 3}
       propertyPath: m_Pivot.x

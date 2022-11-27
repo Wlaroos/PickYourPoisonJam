@@ -226,7 +226,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3361765708322541977, guid: 1bda7497b6c66c14dabba85902d334ce, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686736037238114691, guid: 1bda7497b6c66c14dabba85902d334ce, type: 3}
+      propertyPath: m_fontColor.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686736037238114691, guid: 1bda7497b6c66c14dabba85902d334ce, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
       objectReference: {fileID: 0}
     - target: {fileID: 4615962825450215045, guid: 1bda7497b6c66c14dabba85902d334ce, type: 3}
       propertyPath: m_Pivot.x

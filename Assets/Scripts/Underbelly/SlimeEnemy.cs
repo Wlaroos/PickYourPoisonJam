@@ -226,7 +226,9 @@ public class SlimeEnemy : MonoBehaviour
         else if(other.tag == "Bullet" && !_dead && !_noDamage)
         {
             _DoT += _DoTAmount;
-            transform.GetChild(0).gameObject.SetActive(true);
+
+            transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>().color = Color.white;
             transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>().text = "x" + (int)(_DoT / 5);
 
             Invoke(nameof(Detox), _posionTime);
@@ -237,11 +239,14 @@ public class SlimeEnemy : MonoBehaviour
     {
         _DoT -= _DoTAmount;
 
+        transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>().color = Color.white;
         transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>().text = "x" + (int)(_DoT / 5);
 
         if (_DoT <= 0)
         {
-            transform.GetChild(0).gameObject.SetActive(false);
+            transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = Color.clear;
+            transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>().color = Color.clear;
         }
     }
 
