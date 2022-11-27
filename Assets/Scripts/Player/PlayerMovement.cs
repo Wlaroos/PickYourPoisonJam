@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _moveSpeed = 5f;
     [SerializeField] private float _smoothSpeed = 0.2f;
 
+    public bool allowInput = true;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -21,7 +23,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Inputs();
+        if (allowInput)
+        {
+            Inputs();
+        }
     }
 
     void Inputs()
@@ -29,10 +34,7 @@ public class PlayerMovement : MonoBehaviour
         _input.x = Input.GetAxis("Horizontal");
         _input.y = Input.GetAxis("Vertical");
         _dampedInput = Vector2.SmoothDamp(_dampedInput, _input, ref _currentVelocity, _smoothSpeed);
-    }
 
-    private void FixedUpdate()
-    {
         moveCharacter(_dampedInput);
     }
 

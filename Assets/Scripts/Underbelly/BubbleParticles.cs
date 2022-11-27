@@ -14,9 +14,13 @@ public class BubbleParticles : MonoBehaviour
 
     private void Awake()
     {
-        _reactorRef = FindObjectOfType<Reactor>();
+        if (FindObjectOfType<Reactor>() != null)
+        {
+            _reactorRef = FindObjectOfType<Reactor>();
+            ps.trigger.SetCollider(0, _reactorRef.GetComponent<CircleCollider2D>());
+        }
+
         ps = transform.GetComponent<ParticleSystem>();
-        ps.trigger.SetCollider(0, _reactorRef.GetComponent<CircleCollider2D>());
     }
 
     // When particle enters the trigger of the reactor

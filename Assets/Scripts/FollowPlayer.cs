@@ -15,6 +15,9 @@ public class FollowPlayer : MonoBehaviour
 
     private Rigidbody2D _rb;
 
+    Vector3 _velocity;
+    float _smoothTime = .01f;
+
     void Awake()
     {
         _tempFollowDistance = _followDistance;
@@ -51,7 +54,11 @@ public class FollowPlayer : MonoBehaviour
     IEnumerator ReplaceRigidBody(Vector2 setTo)
     {
         yield return new WaitForSeconds(_tempFollowDistance);
-        transform.position = setTo;
+
+        Vector3 _desiredPosition = Vector3.SmoothDamp(transform.position, setTo, ref _velocity, _smoothTime);
+        transform.position = _desiredPosition;
+
+        //transform.position = setTo;
     }
 
     void SetRandoms()

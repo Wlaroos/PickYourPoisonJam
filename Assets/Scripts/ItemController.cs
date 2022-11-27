@@ -37,6 +37,8 @@ public class ItemController : MonoBehaviour
                 Destroy(ItemShadow);
                 if(!isTeleporter)
                     AudioManager.PlaySound("ItemPickup");
+                if (name == "Gun")
+                    other.transform.GetChild(1).gameObject.SetActive(true);
                 if(isTeleporter)
                     StartCoroutine(Teleport());
             }
