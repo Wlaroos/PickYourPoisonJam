@@ -3944,6 +3944,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6807136055511219905, guid: 3f1f4fb843d14ad44b11f4ce97ecdf4a, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6807136055511219906, guid: 3f1f4fb843d14ad44b11f4ce97ecdf4a, type: 3}
       propertyPath: m_Name
       value: PoisonBarrel (1)
