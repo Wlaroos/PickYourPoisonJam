@@ -61,7 +61,7 @@ public class UnderbellyDoors : MonoBehaviour
                 Instantiate(_lockPS, transform.position, Quaternion.Euler(0,0,210));
                 Instantiate(_finalBreakPS, transform.position, Quaternion.Euler(0, 0, 60));
 
-                _pathfinder.Scan();
+                _pathfinder.Scan(_pathfinder.graphs);
 
                 transform.GetChild(0).gameObject.SetActive(false);
 
