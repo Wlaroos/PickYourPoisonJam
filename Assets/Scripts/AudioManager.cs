@@ -20,6 +20,7 @@ public class AudioManager : MonoBehaviour
     private string tmpName;
     private float tmpVol;
 
+
     // Use this for initialization
 
     void Awake()
@@ -48,6 +49,7 @@ public class AudioManager : MonoBehaviour
             s.source.clip = s.audioClip;
 
             s.source.volume = s.volume;
+            s.source.loop = s.looping;
 
         }
     }

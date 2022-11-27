@@ -50,78 +50,100 @@ MonoBehaviour:
     volume: 1
     pitchVariation: 0
     source: {fileID: 0}
+    looping: 0
   - audioName: ButtonSelect
     audioClip: {fileID: 8300000, guid: 73a34a90e628a184ba8cef6c3c5b016a, type: 3}
     volume: 1
     pitchVariation: 0
     source: {fileID: 0}
+    looping: 0
   - audioName: ItemPickup
     audioClip: {fileID: 8300000, guid: 8bede27da09980343bec1d8ab06549dd, type: 3}
     volume: 1
     pitchVariation: 0
     source: {fileID: 0}
+    looping: 0
   - audioName: Explosion
     audioClip: {fileID: 8300000, guid: 2672515facd58814394dce807dcb5227, type: 3}
     volume: 1
     pitchVariation: 0
     source: {fileID: 0}
+    looping: 0
   - audioName: Gunshot1
     audioClip: {fileID: 8300000, guid: 519ed5e5574c4b1449e3117e8e76c7f7, type: 3}
     volume: 1
     pitchVariation: 0.05
     source: {fileID: 0}
+    looping: 0
   - audioName: Gunshot2
     audioClip: {fileID: 8300000, guid: 5cfdf452bd394d440a4a82822f211f02, type: 3}
     volume: 1
     pitchVariation: 0.05
     source: {fileID: 0}
+    looping: 0
   - audioName: Gunshot3
     audioClip: {fileID: 8300000, guid: b8a76c4c0f42ba14d829307a62fff58f, type: 3}
     volume: 1
     pitchVariation: 0.05
     source: {fileID: 0}
+    looping: 0
   - audioName: Gunshot4
     audioClip: {fileID: 8300000, guid: 488cc60f3755eb647b479faa37f1da28, type: 3}
     volume: 1
     pitchVariation: 0.05
     source: {fileID: 0}
+    looping: 0
   - audioName: CameraUp
     audioClip: {fileID: 8300000, guid: 671be692bfbb43344bd5744be54160f8, type: 3}
     volume: 1
     pitchVariation: 0.02
     source: {fileID: 0}
+    looping: 0
   - audioName: CameraDown
     audioClip: {fileID: 8300000, guid: 1584b450f4aa1bc45b4eab34dc56b00e, type: 3}
     volume: 1
     pitchVariation: 0.02
     source: {fileID: 0}
+    looping: 0
   - audioName: BulletCollide
     audioClip: {fileID: 8300000, guid: d9982fd6c643090409206a276777eace, type: 3}
     volume: 1
     pitchVariation: 0.1
     source: {fileID: 0}
+    looping: 0
   - audioName: OrbGrow
     audioClip: {fileID: 8300000, guid: 935b6a4b19fc27c4e8815283d8fc0131, type: 3}
     volume: 1
     pitchVariation: 0.1
     source: {fileID: 0}
+    looping: 0
   - audioName: OrbFire
     audioClip: {fileID: 8300000, guid: 816fe2dfa016fe94aa507223e401ec4e, type: 3}
     volume: 1
     pitchVariation: 0.1
     source: {fileID: 0}
+    looping: 0
   - audioName: OrbExplode
     audioClip: {fileID: 8300000, guid: e32319a8c80a6f2428680bd38cc339b5, type: 3}
     volume: 1
     pitchVariation: 0.2
     source: {fileID: 0}
+    looping: 0
   - audioName: EnemyExplode
     audioClip: {fileID: 8300000, guid: ed6de610f41161e419935c37e3d1eb72, type: 3}
     volume: 1
     pitchVariation: 0.2
     source: {fileID: 0}
+    looping: 0
   - audioName: PillarDamage
     audioClip: {fileID: 8300000, guid: 886237e8d62ede94aae16729ff633c76, type: 3}
-    volume: 1
+    volume: 0.2
     pitchVariation: 0.1
     source: {fileID: 0}
+    looping: 0
+  - audioName: LabyrinthAmbience
+    audioClip: {fileID: 8300000, guid: 77edab927dbfaba4d9f339f3d721f604, type: 3}
+    volume: 0.5
+    pitchVariation: 0.1
+    source: {fileID: 0}
+    looping: 1
