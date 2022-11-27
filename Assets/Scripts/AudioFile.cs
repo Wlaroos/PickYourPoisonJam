@@ -18,4 +18,6 @@ public class AudioFile
     [HideInInspector]
     public AudioSource source;
 
+    public bool looping;
+
 }
