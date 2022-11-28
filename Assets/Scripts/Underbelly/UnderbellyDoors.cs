@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using EZCameraShake;
 
 public class UnderbellyDoors : MonoBehaviour
 {
@@ -49,6 +50,10 @@ public class UnderbellyDoors : MonoBehaviour
 
         if (_currentHealth <= 0)
         {
+            if(!_final){
+            AudioManager.PlaySound("WoodenDoorBreak");
+            CameraShaker.Instance.ShakeOnce(6.5f,4f,0.1f,0.8f);
+            }
             _sr.sprite = _sprites[2];
             _sr.sortingOrder = 3;
 
@@ -75,6 +80,7 @@ public class UnderbellyDoors : MonoBehaviour
     {
         if(collision.tag == "Bullet" && !_final)
         {
+            AudioManager.PlaySound("WoodenDoorDamage");
             _DoT += 10;
 
             transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = Color.white;

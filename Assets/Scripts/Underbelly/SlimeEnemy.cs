@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Pathfinding;
+using EZCameraShake;
 
 public class SlimeEnemy : MonoBehaviour
 {
@@ -252,6 +253,7 @@ public class SlimeEnemy : MonoBehaviour
 
     private void Grow()
     {
+        AudioManager.PlaySound("SlimeGrow");
         Instantiate(_helmParticles, transform.position, Quaternion.Euler(0, 0, 0));
         state = State.GrowState;
         NextState();
@@ -260,6 +262,7 @@ public class SlimeEnemy : MonoBehaviour
     public void Explode()
     {
         state = State.ExplodeState;
+        AudioManager.PlaySound("RatExplode");
         NextState();
     }
 
