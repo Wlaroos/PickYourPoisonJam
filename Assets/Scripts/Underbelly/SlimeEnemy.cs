@@ -135,7 +135,7 @@ public class SlimeEnemy : MonoBehaviour
         Debug.Log("Explode: Enter");
 
         int index = 0;
-        _animSpeed = 0.05f;
+        _animSpeed = 0.1f;
         _noDamage = true;
 
         _AIPath.maxSpeed = 0;
