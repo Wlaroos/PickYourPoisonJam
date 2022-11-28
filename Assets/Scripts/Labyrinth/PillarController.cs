@@ -27,21 +27,22 @@ public class PillarController : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Bullet"){
             transform.Rotate(0,0,Random.Range(0,360));
-            AudioManager.PlaySound("PillarDamage");
+            
             _currentHealth -= 1;
             if(_currentHealth <= 0)
             {
                 Death();
             }
+            else AudioManager.PlaySound("PillarDamage");
         }
     }
 
     void Death()
     {
         _winRef.Decrease();
-
+        AudioManager.PlaySound("PillarDestroyed");
         GameObject particles = Instantiate(_pillarExplosion, transform.position, Quaternion.Euler(0,0,0)).gameObject;
-        Destroy(particles, 2f);
+        Destroy(particles, 3.5f);
         gameObject.SetActive(false);
     }
 }

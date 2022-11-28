@@ -231,3 +231,15 @@ MonoBehaviour:
     pitchVariation: 0
     source: {fileID: 0}
     looping: 1
+  - audioName: PillarDestroyed
+    audioClip: {fileID: 8300000, guid: b7cbc0894301a9c4e981d3a2ea528b2e, type: 3}
+    volume: 1
+    pitchVariation: 0
+    source: {fileID: 0}
+    looping: 0
+  - audioName: Teleport
+    audioClip: {fileID: 8300000, guid: 6af49bde45ffdd547980aadf9ded44b4, type: 3}
+    volume: 1
+    pitchVariation: 0
+    source: {fileID: 0}
+    looping: 0

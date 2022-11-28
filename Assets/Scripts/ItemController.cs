@@ -20,6 +20,8 @@ public class ItemController : MonoBehaviour
     public GameObject flashImage;
 
     public string levelToLoad;
+    public string sound;
+
 
     void Start(){
         gameObject.GetComponentInChildren<CircleCollider2D>().radius = pickupRadius;
@@ -47,6 +49,7 @@ public class ItemController : MonoBehaviour
     }
 
     public IEnumerator Teleport(){
+        AudioManager.PlaySound("Teleport");
         GameObject.FindObjectOfType<PlayerWeapon>().allowInput = false;
         flashImage.GetComponent<Animator>().Play("Flash",-1,0);
         titleCard.SetActive(true);

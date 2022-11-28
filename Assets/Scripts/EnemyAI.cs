@@ -18,9 +18,12 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private AIPath _AIPath;
     public bool anim;
     public GameObject dp;
+
+    public bool canAttack = false;
     void Start(){
         _AIPath = GetComponent<AIPath>();
         playerTransform = GameObject.Find("Player").GetComponent<Transform>();
+        StartCoroutine(ATK());
     }
 
     void Update(){
@@ -38,7 +41,7 @@ public class EnemyAI : MonoBehaviour
         else
         _AIPath.maxSpeed = Spd;
 
-        if(Mathf.Abs(distToPlayer) < dmgR && !anim && GameObject.FindObjectOfType<PlayerMovement>() != null)
+        if(Mathf.Abs(distToPlayer) < dmgR && !anim && canAttack && GameObject.FindObjectOfType<PlayerMovement>() != null)
         {
            Explode();
         }
@@ -91,4 +94,8 @@ public class EnemyAI : MonoBehaviour
         anim = false;
     }
 
+    public IEnumerator ATK(){
+        yield return new WaitForSeconds(2f);
+        canAttack = true;
+    }
 }
