@@ -73,7 +73,14 @@ public class PlayerBullets : MonoBehaviour
             ci.Flash();
             AudioManager.PlaySound("OrbExplode");
         }
-        else AudioManager.PlaySound("BulletCollide");
+        else if (name == "ChimeraBullet")
+        {
+            AudioManager.PlaySound("PoisonBullet");
+        }
+        else
+        {
+            AudioManager.PlaySound("BulletCollide");
+        }
         Destroy(gameObject); 
     }
 
