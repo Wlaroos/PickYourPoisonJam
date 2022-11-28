@@ -29,7 +29,6 @@ public class BubbleParticles : MonoBehaviour
 
         if (ps.particleCount <= 0)
         {
-            AudioManager.PlaySound("Pop");
             Destroy(gameObject);
         }
 
@@ -47,7 +46,7 @@ public class BubbleParticles : MonoBehaviour
             // Applies local referece changes to the particle in the list
             _particles[i] = p;
 
-            //SOUND
+            AudioManager.PlaySound("Pop");
         }
 
         // Apply changes to the particle system using the new values from the list
