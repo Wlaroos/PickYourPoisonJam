@@ -147,3 +147,15 @@ MonoBehaviour:
     pitchVariation: 0.1
     source: {fileID: 0}
     looping: 1
+  - audioName: SpawnEnemy
+    audioClip: {fileID: 8300000, guid: 89e575885be175f448eb783cc37e87be, type: 3}
+    volume: 0.5
+    pitchVariation: 0.1
+    source: {fileID: 0}
+    looping: 0
+  - audioName: LabyrinthAttack
+    audioClip: {fileID: 8300000, guid: 617e8fb071588db48adddbab6b0d2124, type: 3}
+    volume: 1
+    pitchVariation: 0.1
+    source: {fileID: 0}
+    looping: 0

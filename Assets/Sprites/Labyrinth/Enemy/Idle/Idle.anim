@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WeaponGrow
+  m_Name: Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,19 +20,15 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: b2bfb1b740050c147b9ad6277cd756aa, type: 3}
-    - time: 0.8333333
-      value: {fileID: 21300000, guid: 33a272a724a08aa49a6d1fb11e65d5bf, type: 3}
-    - time: 0.85
-      value: {fileID: 21300000, guid: 32a7575796495ab418a3ab16a2958376, type: 3}
-    - time: 0.8666667
-      value: {fileID: 21300000, guid: 48bd1123a7fd25644b8be78a6986fdb3, type: 3}
-    - time: 0.8833333
-      value: {fileID: 21300000, guid: 2a89930a32ba06c48adcbe62a7e1e778, type: 3}
-    - time: 0.9
-      value: {fileID: 21300000, guid: 3cbf469f2fc412348a98d591f002f6da, type: 3}
+      value: {fileID: 21300000, guid: 47786d3b972f16a4b8cb0bfba6eb13f0, type: 3}
+    - time: 0.016666668
+      value: {fileID: 21300000, guid: feffde4e203108443836d65ebbb5f97a, type: 3}
+    - time: 0.033333335
+      value: {fileID: 21300000, guid: 00b3c9fbd7f99ed4ab935a9ccca6e1f5, type: 3}
+    - time: 0.05
+      value: {fileID: 21300000, guid: 364f08ffe5fad3347b66733e6a5a3e6a, type: 3}
     attribute: m_Sprite
-    path: Weapon
+    path: 
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 60
@@ -43,30 +39,28 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1855955664
+      path: 0
       attribute: 0
       script: {fileID: 0}
       typeID: 212
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: b2bfb1b740050c147b9ad6277cd756aa, type: 3}
-    - {fileID: 21300000, guid: 33a272a724a08aa49a6d1fb11e65d5bf, type: 3}
-    - {fileID: 21300000, guid: 32a7575796495ab418a3ab16a2958376, type: 3}
-    - {fileID: 21300000, guid: 48bd1123a7fd25644b8be78a6986fdb3, type: 3}
-    - {fileID: 21300000, guid: 2a89930a32ba06c48adcbe62a7e1e778, type: 3}
-    - {fileID: 21300000, guid: 3cbf469f2fc412348a98d591f002f6da, type: 3}
+    - {fileID: 21300000, guid: 47786d3b972f16a4b8cb0bfba6eb13f0, type: 3}
+    - {fileID: 21300000, guid: feffde4e203108443836d65ebbb5f97a, type: 3}
+    - {fileID: 21300000, guid: 00b3c9fbd7f99ed4ab935a9ccca6e1f5, type: 3}
+    - {fileID: 21300000, guid: 364f08ffe5fad3347b66733e6a5a3e6a, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.9166666
+    m_StopTime: 0.06666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 0
+    m_LoopTime: 1
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
@@ -80,11 +74,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.85
-    functionName: PlayGrow
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

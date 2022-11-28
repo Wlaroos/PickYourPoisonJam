@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2538392319685614864}
   - component: {fileID: 2538392319685614867}
   - component: {fileID: 2538392319685614868}
+  - component: {fileID: 8102280394063295539}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: BulletBounds
@@ -51,11 +52,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 7
-  dmgR: 0
+  dmgR: 3
   Spd: 1.5
+  ringPrefab: {fileID: 7498738829176284789, guid: 543cdcaf111688a409bd051473a07283, type: 3}
   distToPlayer: 0
+  atkCD: 1
+  atkTimer: 0
   playerTransform: {fileID: 0}
   _AIPath: {fileID: 0}
+  anim: 1
+  dp: {fileID: 1373554619809227210, guid: f32a8519b4f23c4468efd3fe251b75ec, type: 3}
 --- !u!212 &2538392319685614893
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -97,8 +103,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3e91d755afde8e64fabafe5482307405, type: 3}
-  m_Color: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a12dabaa93af01a4fb86ed8c2b3ed33a, type: 3}
+  m_Color: {r: 0.03137255, g: 0.03137255, b: 0.03137255, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -224,3 +230,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+--- !u!95 &8102280394063295539
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2538392319685614895}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a85ad0a1fa6cc8649b0f118423e0a596, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
