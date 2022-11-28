@@ -5,7 +5,7 @@ using EZCameraShake;
 
 public class PillarController : MonoBehaviour
 {
-    private static int _pillarAmount = 0;
+    [SerializeField] PillarWinCondition _winRef;
     [SerializeField] private int _maxHealth = 4;
     private int _currentHealth;
 
@@ -13,7 +13,6 @@ public class PillarController : MonoBehaviour
 
     private void Awake()
     {
-        _pillarAmount += 1;
         _currentHealth = _maxHealth;
     }
 
@@ -39,12 +38,7 @@ public class PillarController : MonoBehaviour
 
     void Death()
     {
-        _pillarAmount -= 1;
-
-        if (_pillarAmount <= 0)
-        {
-            GameObject.FindObjectOfType<WinLossController>().WinEvent();
-        }
+        _winRef.Decrease();
 
         GameObject particles = Instantiate(_pillarExplosion, transform.position, Quaternion.Euler(0,0,0)).gameObject;
         Destroy(particles, 2f);

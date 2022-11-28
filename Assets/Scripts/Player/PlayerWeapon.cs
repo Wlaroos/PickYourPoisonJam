@@ -79,7 +79,14 @@ public class PlayerWeapon : MonoBehaviour
 
     private void Shoot()
     {
-        AudioManager.PlaySound("Gunshot1");
+        if(bulletRef.name == "ChimeraBullet")
+        {
+            AudioManager.PlaySound("PoisonShot");
+        }
+        else
+        {
+            AudioManager.PlaySound("Gunshot1");
+        }
         CameraShaker.Instance.ShakeOnce(3f, 2f, 0.2f, 0.2f);
         gunEndPointPosition = shootTransform.position;
         Transform bulletTransform = Instantiate(bulletRef.transform, gunEndPointPosition, Quaternion.identity);
@@ -89,9 +96,6 @@ public class PlayerWeapon : MonoBehaviour
         float angle = Mathf.Atan2(aimDir.y, aimDir.x) * Mathf.Rad2Deg;
 
         bulletTransform.GetComponent<PlayerBullets>().BulletSetup(shootDir, angle, 20, 1, 3, _bulletSize);
-
-        // Audio
-        // Camera Shake
 
         // Recoil
         transform.GetChild(0).position = transform.GetChild(0).position += (-shootDir * 0.75f);

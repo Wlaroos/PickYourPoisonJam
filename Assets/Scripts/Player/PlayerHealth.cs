@@ -100,7 +100,7 @@ public class PlayerHealth : MonoBehaviour
         _DoT += amount;
 
         if (amount > 0)
-        { AudioManager.PlaySound("PoisonMeterFill"); }
+        { /*AudioManager.PlaySound("PoisonMeterFill");*/ }
         else
         { /*AudioManager.PlaySound("PoisonMeterDeplete");*/ }
 

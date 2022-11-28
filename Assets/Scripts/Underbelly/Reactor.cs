@@ -30,7 +30,11 @@ public class Reactor : MonoBehaviour
         {
             _amountCurrent++;
 
-            if (_amountCurrent >= _amountNeeded) { _ready = true; }
+            if (_amountCurrent >= _amountNeeded) 
+            {
+                AudioManager.PlaySound("PoisonMeterFill");
+                _ready = true;
+            }
                 
             _scale.y = (_amountCurrent / _amountNeeded) * 4.6875f;
             _bar1.localScale = _scale;

@@ -29,6 +29,7 @@ public class BubbleParticles : MonoBehaviour
 
         if (ps.particleCount <= 0)
         {
+            AudioManager.PlaySound("Pop");
             Destroy(gameObject);
         }
 
