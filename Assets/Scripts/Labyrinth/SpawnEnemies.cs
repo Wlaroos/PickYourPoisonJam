@@ -7,13 +7,14 @@ public class SpawnEnemies : MonoBehaviour
     public float timer;
     public float time;
     public Transform[] spawns;
-
+    public Transform distTransform;
     public GameObject enemyPrefab;
     public Transform playerTransform;
 
     public float spawnR = 10;
     [SerializeField] private float distToPlayer;
     public void SpawnEnemy(){
+        AudioManager.PlaySound("SpawnEnemy");   
         timer = Random.Range(3,9);
         time = timer;
         Instantiate(enemyPrefab, spawns[Random.Range(0,spawns.Length)].position,Quaternion.identity);
@@ -23,7 +24,7 @@ public class SpawnEnemies : MonoBehaviour
     }
     void Update(){
         if(playerTransform != null)
-        distToPlayer = Vector2.Distance(transform.position,playerTransform.position);
+        distToPlayer = Vector2.Distance(distTransform.position,playerTransform.position);
 
 
         time-=Time.deltaTime;
