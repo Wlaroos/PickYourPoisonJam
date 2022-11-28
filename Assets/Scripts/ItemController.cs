@@ -47,6 +47,7 @@ public class ItemController : MonoBehaviour
     }
 
     public IEnumerator Teleport(){
+        GameObject.FindObjectOfType<PlayerWeapon>().allowInput = false;
         flashImage.GetComponent<Animator>().Play("Flash",-1,0);
         titleCard.SetActive(true);
         yield return new WaitForSeconds(1f);
@@ -62,6 +63,7 @@ public class ItemController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         flashImage.GetComponent<Animator>().Play("Flash");
         yield return new WaitForSeconds(0.1f);
+        GameObject.FindObjectOfType<PlayerWeapon>().allowInput = true;
         Application.LoadLevel(levelToLoad);
         Destroy(this.gameObject,0f);
     }

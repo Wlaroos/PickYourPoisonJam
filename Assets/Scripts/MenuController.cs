@@ -2,14 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
     private void Awake()
     {
-        GameObject.FindObjectOfType<PlayerMovement>().allowInput = false;
-        GameObject.FindObjectOfType<PlayerWeapon>().allowInput = false;
-        GameObject.FindObjectOfType<PlayerWeapon>().gameObject.SetActive(false);
+        int y = SceneManager.GetActiveScene().buildIndex;
+        if (y == 0)
+        {
+            GameObject.FindObjectOfType<PlayerMovement>().allowInput = false;
+            GameObject.FindObjectOfType<PlayerWeapon>().allowInput = false;
+            GameObject.FindObjectOfType<PlayerWeapon>().gameObject.SetActive(false);
+        }
     }
 
     public void StartButton(RectTransform t){

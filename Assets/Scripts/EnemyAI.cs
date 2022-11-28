@@ -38,7 +38,8 @@ public class EnemyAI : MonoBehaviour
         else
         _AIPath.maxSpeed = Spd;
 
-        if(Mathf.Abs(distToPlayer) < dmgR && !anim){
+        if(Mathf.Abs(distToPlayer) < dmgR && !anim && GameObject.FindObjectOfType<PlayerMovement>() != null)
+        {
            Explode();
         }
     }

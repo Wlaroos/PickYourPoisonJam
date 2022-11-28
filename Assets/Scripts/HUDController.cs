@@ -7,7 +7,6 @@ public class HUDController : MonoBehaviour
 {
 
     [SerializeField] PlayerHealth _playerHealthRef;
-    [SerializeField] PlayerWeapon _playerWepRef;
 
     [SerializeField] Slider _healthSlider;
 
@@ -22,14 +21,12 @@ public class HUDController : MonoBehaviour
     {
         _playerHealthRef.HealthChanged += OnHealthChanged;
         _playerHealthRef.MaxHealthChanged += OnMaxHealthChanged;
-        _playerWepRef.Fired += OnFired;
     }
 
     private void OnDisable()
     {
         _playerHealthRef.HealthChanged -= OnHealthChanged;
         _playerHealthRef.MaxHealthChanged -= OnMaxHealthChanged;
-        _playerWepRef.Fired -= OnFired;
     }
 
     void OnHealthChanged(float health)
@@ -43,10 +40,5 @@ public class HUDController : MonoBehaviour
         _healthSlider.maxValue = _playerHealthRef.MaxHealth;
         _healthSlider.minValue = -_playerHealthRef.MaxHealth / 10;
         _healthSlider.value = _playerHealthRef.CurrentHealth;
-    }
-
-    void OnFired()
-    {
-
     }
 }

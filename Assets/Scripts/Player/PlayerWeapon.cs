@@ -31,7 +31,7 @@ public class PlayerWeapon : MonoBehaviour
 
     private void Update()
     {
-        if (allowInput)
+        if (allowInput && Time.timeScale == 1)
         {
             Aim();
             ShootCheck();

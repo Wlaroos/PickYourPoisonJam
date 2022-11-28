@@ -50,7 +50,10 @@ public class WinLossController : MonoBehaviour
     private IEnumerator Win()
     {
         GameObject.FindObjectOfType<PlayerMovement>().allowInput = false;
-        GameObject.FindObjectOfType<PlayerWeapon>().allowInput = false;
+        if (GameObject.FindObjectOfType<PlayerWeapon>() != null)
+            GameObject.FindObjectOfType<PlayerWeapon>().allowInput = false;
+        if (GameObject.FindObjectOfType<LabyrinthWeapon>() != null)
+            GameObject.FindObjectOfType<LabyrinthWeapon>().allowInput = false;
 
         Cursor.visible = true;
 
@@ -72,7 +75,10 @@ public class WinLossController : MonoBehaviour
     private IEnumerator Lose()
     {
         GameObject.FindObjectOfType<PlayerMovement>().allowInput = false;
+        if (GameObject.FindObjectOfType<PlayerWeapon>() != null)
         GameObject.FindObjectOfType<PlayerWeapon>().allowInput = false;
+        if (GameObject.FindObjectOfType<LabyrinthWeapon>() != null)
+            GameObject.FindObjectOfType<LabyrinthWeapon>().allowInput = false;
 
         Cursor.visible = true;
 

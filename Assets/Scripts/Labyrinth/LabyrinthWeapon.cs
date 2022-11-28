@@ -24,6 +24,8 @@ public class LabyrinthWeapon : MonoBehaviour
 
     private ColorInversion ci;
 
+    public bool allowInput = true; 
+
     private void Awake()
     {
         ci = GameObject.Find("Labyrinth").GetComponent<ColorInversion>();
@@ -32,8 +34,11 @@ public class LabyrinthWeapon : MonoBehaviour
 
     private void Update()
     {
-        Aim();
-        Shoot();
+        if (allowInput && Time.timeScale == 1)
+        {
+            Aim();
+            Shoot();
+        }
     }
 
     private void Aim()
