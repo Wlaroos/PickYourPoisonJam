@@ -13,18 +13,27 @@ public class PauseController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             Time.timeScale = 0;
+            Cursor.visible = true;
             _panelRef.SetActive(true);
         }
     }
 
     public void ResumeButton()
     {
+        if(GameObject.FindObjectOfType<Crosshair>() != null)
+        {
+            Cursor.visible = false;
+        }
         Time.timeScale = 1;
         _panelRef.SetActive(false);
     }
 
     public void RestartButton()
     {
+        if (GameObject.FindObjectOfType<Crosshair>() != null)
+        {
+            Cursor.visible = false;
+        }
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
