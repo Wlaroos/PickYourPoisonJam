@@ -159,3 +159,45 @@ MonoBehaviour:
     pitchVariation: 0.1
     source: {fileID: 0}
     looping: 0
+  - audioName: RatAttackCharge
+    audioClip: {fileID: 8300000, guid: df94bcf4d2bc1264eaedd3d92ca609eb, type: 3}
+    volume: 1
+    pitchVariation: 0.1
+    source: {fileID: 0}
+    looping: 0
+  - audioName: RatExplode
+    audioClip: {fileID: 8300000, guid: 5c4ccc714fa49004aaca89b5396268db, type: 3}
+    volume: 1
+    pitchVariation: 0.1
+    source: {fileID: 0}
+    looping: 0
+  - audioName: RatGunShoot
+    audioClip: {fileID: 8300000, guid: e976927e999af66418ab94c708669e19, type: 3}
+    volume: 1
+    pitchVariation: 0.1
+    source: {fileID: 0}
+    looping: 0
+  - audioName: PoisonMeterFill
+    audioClip: {fileID: 8300000, guid: dc992445da6260e44be07f7a22809ee4, type: 3}
+    volume: 1
+    pitchVariation: 0.1
+    source: {fileID: 0}
+    looping: 0
+  - audioName: WoodenDoorBreak
+    audioClip: {fileID: 8300000, guid: 54b4d83064f6f57479e00c0cb0bbba01, type: 3}
+    volume: 1
+    pitchVariation: 0.1
+    source: {fileID: 0}
+    looping: 0
+  - audioName: WoodenDoorDamage
+    audioClip: {fileID: 8300000, guid: 92962d3b3faae0f4d988c2e79fbb12fd, type: 3}
+    volume: 0.3
+    pitchVariation: 0.1
+    source: {fileID: 0}
+    looping: 0
+  - audioName: SlimeGrow
+    audioClip: {fileID: 8300000, guid: 1147223eeac03654e922b4a3b048b2eb, type: 3}
+    volume: 1
+    pitchVariation: 0.1
+    source: {fileID: 0}
+    looping: 0
