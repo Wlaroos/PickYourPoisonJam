@@ -113,7 +113,7 @@ public class SlimeEnemy : MonoBehaviour
         int index = 0;
         _animSpeed = 0.2f;
 
-        _AIPath.maxSpeed = 4;
+        _AIPath.maxSpeed = 6f;
 
         while (state == State.BigWalkState)
         {

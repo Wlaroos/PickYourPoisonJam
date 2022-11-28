@@ -5,15 +5,15 @@ using DG.Tweening;
 
 public class MenuController : MonoBehaviour
 {
-    [SerializeField] PlayerMovement _playerRef;
-
     private void Awake()
     {
-        _playerRef.allowInput = false;
+        GameObject.FindObjectOfType<PlayerMovement>().allowInput = false;
+        GameObject.FindObjectOfType<PlayerWeapon>().allowInput = false;
+        GameObject.FindObjectOfType<PlayerWeapon>().gameObject.SetActive(false);
     }
 
     public void StartButton(RectTransform t){
-        _playerRef.allowInput = true;
+        GameObject.FindObjectOfType<PlayerMovement>().allowInput = true;
         AudioManager.PlaySound("ButtonSelect");
         Sequence mySequence = DOTween.Sequence();
         mySequence.AppendInterval(0.3f);

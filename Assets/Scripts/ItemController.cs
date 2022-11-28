@@ -10,6 +10,7 @@ public class ItemController : MonoBehaviour
     public float pickupRadius;
 
     public bool isTeleporter;
+    public bool isWinCondition;
     private bool pickedUp;
 
     public GameObject titleCard;
@@ -19,8 +20,6 @@ public class ItemController : MonoBehaviour
     public GameObject flashImage;
 
     public string levelToLoad;
-
-    
 
     void Start(){
         gameObject.GetComponentInChildren<CircleCollider2D>().radius = pickupRadius;
@@ -41,6 +40,8 @@ public class ItemController : MonoBehaviour
                     other.transform.GetChild(1).gameObject.SetActive(true);
                 if(isTeleporter)
                     StartCoroutine(Teleport());
+                if (isWinCondition)
+                    GameObject.FindObjectOfType<WinLossController>().WinEvent();
             }
         }
     }

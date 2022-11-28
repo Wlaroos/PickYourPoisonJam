@@ -15,10 +15,6 @@ public class PrisonController : MonoBehaviour
 
     public bool behindWall = false;
 
-    void Start(){
-        
-    }
-
     public void BreakWall(){
         prisonWall.SetActive(false);
         prisonWallBroken.SetActive(true);

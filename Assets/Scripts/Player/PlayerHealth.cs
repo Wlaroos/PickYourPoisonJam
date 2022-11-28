@@ -90,6 +90,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Death()
     {
+        GameObject.FindObjectOfType<WinLossController>().LoseEvent();
         gameObject.SetActive(false);
         // Death Code
     }

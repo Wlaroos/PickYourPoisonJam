@@ -20,19 +20,22 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField] private float _fireDelay;
     private float _startFireTime;
 
-    private Rigidbody2D _rb;
+    public bool allowInput = true;
 
     [SerializeField] private float _bulletSize;
 
-    private void Awake()
+    private void OnEnable()
     {
-        _rb = GetComponent<Rigidbody2D>();
+        allowInput = true;
     }
 
     private void Update()
     {
-        Aim();
-        ShootCheck();
+        if (allowInput)
+        {
+            Aim();
+            ShootCheck();
+        }
     }
 
     private void Aim()

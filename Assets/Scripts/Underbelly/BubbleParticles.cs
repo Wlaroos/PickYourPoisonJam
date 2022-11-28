@@ -10,8 +10,6 @@ public class BubbleParticles : MonoBehaviour
 
     List<ParticleSystem.Particle> _particles = new List<ParticleSystem.Particle>();
 
-    float _amount = 20;
-
     private void Awake()
     {
         ps = transform.GetComponent<ParticleSystem>();
