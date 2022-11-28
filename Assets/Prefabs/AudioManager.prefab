@@ -185,19 +185,19 @@ MonoBehaviour:
     looping: 0
   - audioName: WoodenDoorBreak
     audioClip: {fileID: 8300000, guid: d5c64cd8f216fab4aa1bd2415bce012e, type: 3}
-    volume: 1
+    volume: 0.375
     pitchVariation: 0.1
     source: {fileID: 0}
     looping: 0
   - audioName: WoodenDoorDamage
     audioClip: {fileID: 8300000, guid: 6c9c616707653ce42a944d82a46ecb4e, type: 3}
-    volume: 0.3
+    volume: 0.2
     pitchVariation: 0.1
     source: {fileID: 0}
     looping: 0
   - audioName: SlimeGrow
     audioClip: {fileID: 8300000, guid: 1147223eeac03654e922b4a3b048b2eb, type: 3}
-    volume: 1
+    volume: 0.5
     pitchVariation: 0.1
     source: {fileID: 0}
     looping: 0
@@ -214,7 +214,7 @@ MonoBehaviour:
     source: {fileID: 0}
     looping: 0
   - audioName: PoisonShot
-    audioClip: {fileID: 8300000, guid: e976927e999af66418ab94c708669e19, type: 3}
+    audioClip: {fileID: 8300000, guid: 0e729c4975a7eeb428e071ebc2718b23, type: 3}
     volume: 1
     pitchVariation: 0.3
     source: {fileID: 0}
@@ -225,3 +225,9 @@ MonoBehaviour:
     pitchVariation: 0.3
     source: {fileID: 0}
     looping: 0
+  - audioName: UnderbellyMusic
+    audioClip: {fileID: 8300000, guid: 13ae26ee77025ce41a80b56a8cf7d36b, type: 3}
+    volume: 1
+    pitchVariation: 0
+    source: {fileID: 0}
+    looping: 1

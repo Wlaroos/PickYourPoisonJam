@@ -12764,6 +12764,50 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &1295794856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1295794858}
+  - component: {fileID: 1295794857}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1295794857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295794856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e290dbf514ac34594e093614d71f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1295794858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295794856}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -30.85104, y: 19.010923, z: 0.27452368}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1343633834
 GameObject:
   m_ObjectHideFlags: 0
@@ -18182,22 +18226,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
-    - target: {fileID: 3345571919914977328, guid: 1e935911179d1e249b644b1456b98e3a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680525838793809173, guid: 1e935911179d1e249b644b1456b98e3a, type: 3}
-      propertyPath: audioFiles.Array.data[23].volume
-      value: 0.375
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680525838793809173, guid: 1e935911179d1e249b644b1456b98e3a, type: 3}
-      propertyPath: audioFiles.Array.data[24].volume
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680525838793809173, guid: 1e935911179d1e249b644b1456b98e3a, type: 3}
-      propertyPath: audioFiles.Array.data[25].volume
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6644768447241031727, guid: 1e935911179d1e249b644b1456b98e3a, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -19303,6 +19331,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2037878670649994364, guid: 46b5bf3d50048604eae79fc8ad520610, type: 3}
+      propertyPath: m_text
+      value: Essence collected. Successfully escaped.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2037878670839291091, guid: 46b5bf3d50048604eae79fc8ad520610, type: 3}
+      propertyPath: m_text
+      value: Objective complete.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2037878670858059319, guid: 46b5bf3d50048604eae79fc8ad520610, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2037878671000602727, guid: 46b5bf3d50048604eae79fc8ad520610, type: 3}
+      propertyPath: m_text
+      value: Objective failed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2037878671328429300, guid: 46b5bf3d50048604eae79fc8ad520610, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2037878671604140770, guid: 46b5bf3d50048604eae79fc8ad520610, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -19394,6 +19442,10 @@ PrefabInstance:
     - target: {fileID: 2037878671604140783, guid: 46b5bf3d50048604eae79fc8ad520610, type: 3}
       propertyPath: m_Name
       value: cnvs_WinLose
+      objectReference: {fileID: 0}
+    - target: {fileID: 2037878672347626140, guid: 46b5bf3d50048604eae79fc8ad520610, type: 3}
+      propertyPath: m_text
+      value: You were overcome by the toxins.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46b5bf3d50048604eae79fc8ad520610, type: 3}
