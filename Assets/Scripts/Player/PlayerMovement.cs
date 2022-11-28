@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -41,5 +42,12 @@ public class PlayerMovement : MonoBehaviour
     void moveCharacter(Vector2 direction)
     {
         _rb.velocity = direction * _moveSpeed;
+    }
+
+    public void Force(Vector2 dir)
+    {
+        CameraShaker.Instance.ShakeOnce(7.5f, 4f, 0.2f, 0.2f);
+        _rb.AddForce(dir * 750);
+
     }
 }

@@ -10,6 +10,7 @@ public class UnderbellyDoors : MonoBehaviour
     private SpriteRenderer _sr;
     private BoxCollider2D _boxCollider;
     private CircleCollider2D _triggerCollider;
+    private SpriteRenderer _hpsr;
 
     [SerializeField] private float _maxHealth = 100;
     private float _currentHealth;
@@ -29,15 +30,20 @@ public class UnderbellyDoors : MonoBehaviour
         _boxCollider = GetComponent<BoxCollider2D>();
         _triggerCollider = GetComponent<CircleCollider2D>();
         _sr = GetComponent<SpriteRenderer>();
+        _hpsr = transform.GetChild(1).GetComponent<SpriteRenderer>();
         _currentHealth = _maxHealth;
         _sr.sortingOrder = 0;
     }
 
     private void Update()
     {
-        _currentHealth -= (_DoT * Time.deltaTime);
+        if (_currentHealth > 0)
+        {
+            _currentHealth -= (_DoT * Time.deltaTime);
+            _hpsr.transform.localScale = new Vector3(_currentHealth / _maxHealth * 1.5f, .15f, 1);
+        }
 
-        if(_currentHealth <= (_maxHealth / 2))
+        if (_currentHealth <= (_maxHealth / 2))
         {
             _sr.sprite = _sprites[1];
             if (_initalBreakPS != null && !_initial)

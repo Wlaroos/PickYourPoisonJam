@@ -17,6 +17,14 @@ public class PillarController : MonoBehaviour
         _currentHealth = _maxHealth;
     }
 
+/*    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            Death();
+        }
+    }*/
+
     public void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Bullet"){
             transform.Rotate(0,0,Random.Range(0,360));

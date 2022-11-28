@@ -63,7 +63,7 @@ public class EnemyAI : MonoBehaviour
         // ci.Flash();
         AudioManager.PlaySound("LabyrinthAttack");
         if(Mathf.Abs(distToPlayer) < dmgR){
-            playerTransform.gameObject.GetComponent<PlayerHealth>().TakeDamage(20);
+            playerTransform.gameObject.GetComponent<PlayerHealth>().TakeDamage(10);
         }
         StartCoroutine(AnimSet());
         //Destroy(gameObject);

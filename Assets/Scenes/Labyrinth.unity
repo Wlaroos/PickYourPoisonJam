@@ -1225,7 +1225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 292b1144d4168c146bdeefc4e2786d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 3
+  _maxHealth: 1
   _pillarExplosion: {fileID: 5814257937451778596, guid: 35521a99569774543afa0f75a1f59dd3, type: 3}
 --- !u!60 &295412329
 PolygonCollider2D:
@@ -4620,7 +4620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 292b1144d4168c146bdeefc4e2786d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 3
+  _maxHealth: 1
   _pillarExplosion: {fileID: 5814257937451778596, guid: 35521a99569774543afa0f75a1f59dd3, type: 3}
 --- !u!114 &1423300524
 MonoBehaviour:
@@ -4734,7 +4734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 292b1144d4168c146bdeefc4e2786d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 3
+  _maxHealth: 1
   _pillarExplosion: {fileID: 5814257937451778596, guid: 35521a99569774543afa0f75a1f59dd3, type: 3}
 --- !u!60 &1450992654
 PolygonCollider2D:
@@ -5524,7 +5524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 292b1144d4168c146bdeefc4e2786d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 3
+  _maxHealth: 1
   _pillarExplosion: {fileID: 5814257937451778596, guid: 35521a99569774543afa0f75a1f59dd3, type: 3}
 --- !u!60 &1786289448
 PolygonCollider2D:

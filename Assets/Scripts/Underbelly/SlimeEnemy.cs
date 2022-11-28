@@ -40,6 +40,8 @@ public class SlimeEnemy : MonoBehaviour
     [SerializeField] private ParticleSystem _helmParticles;
     [SerializeField] private ParticleSystem _bubbleParticles;
 
+    SpriteRenderer _hpsr;
+
     private float _animSpeed = 0.2f;
 
     public State state;
@@ -49,6 +51,7 @@ public class SlimeEnemy : MonoBehaviour
         _currentHealth = _maxHealth;
         _AIPath = GetComponent<AIPath>();
         _sr = GetComponent<SpriteRenderer>();
+        _hpsr = transform.GetChild(1).GetComponent<SpriteRenderer>();
     }
 
     private void Start()
@@ -132,7 +135,7 @@ public class SlimeEnemy : MonoBehaviour
         Debug.Log("Explode: Enter");
 
         int index = 0;
-        _animSpeed = 0.125f;
+        _animSpeed = 0.05f;
         _noDamage = true;
 
         _AIPath.maxSpeed = 0;
@@ -147,7 +150,6 @@ public class SlimeEnemy : MonoBehaviour
             if (index >= _explodeAnim.Length)
             {
                 Instantiate(_bubbleParticles, transform.position + new Vector3(0, 1.5f, 0), Quaternion.Euler(0, 0, 0));
-                AudioManager.PlaySound("EnemyExplode");
                 Destroy(gameObject);
                 Debug.Log("Explode: Exit");
             }
@@ -201,6 +203,7 @@ public class SlimeEnemy : MonoBehaviour
         if (_currentHealth > 0 && !_dead && !_noDamage)
         {
             _currentHealth -= _DoT * Time.deltaTime;
+            _hpsr.transform.localScale =new Vector3( _currentHealth / _maxHealth * 1.5f, .15f,1);
         }
 
         if(_currentHealth <= _maxHealth * 0.75 && !_grow)
@@ -223,6 +226,10 @@ public class SlimeEnemy : MonoBehaviour
             _dead = true;
             Explode();
             other.GetComponent<PlayerHealth>().TakeDamage(10);
+
+            other.GetComponent<PlayerHealth>().ChangeDOT(2);
+            other.GetComponent<PlayerMovement>().Force(other.transform.position - transform.position);
+            other.GetComponent<PlayerHealth>().DelayedDetox(-2);
         }
         else if(other.tag == "Bullet" && !_dead && !_noDamage)
         {

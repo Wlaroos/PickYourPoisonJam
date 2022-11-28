@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class PoisonAOE : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PoisonAOE : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            CameraShaker.Instance.ShakeOnce(3f, 2f, 0.2f, 0.2f);
             collision.GetComponent<PlayerHealth>().ChangeDOT(_damage);
         }
     }
@@ -24,8 +26,7 @@ public class PoisonAOE : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            collision.GetComponent<PlayerHealth>().ChangeDOT(-_damage);
+            collision.GetComponent<PlayerHealth>().DelayedDetox(-_damage);
         }
     }
-
 }

@@ -191,7 +191,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerHealthRef: {fileID: 0}
-  _playerWepRef: {fileID: 0}
   _healthSlider: {fileID: 8066676292026766266}
 --- !u!1 &8066676291395825903
 GameObject:

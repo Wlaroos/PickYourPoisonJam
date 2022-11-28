@@ -99,6 +99,11 @@ public class PlayerHealth : MonoBehaviour
     {
         _DoT += amount;
 
+        if (amount > 0)
+        { AudioManager.PlaySound("PoisonMeterFill"); }
+        else
+        { /*AudioManager.PlaySound("PoisonMeterDeplete");*/ }
+
         transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         transform.GetChild(2).GetChild(0).GetComponent<TextMeshPro>().color = Color.white;
         transform.GetChild(2).GetChild(0).GetComponent<TextMeshPro>().text = "x" + (int)(_DoT / 2);
@@ -113,5 +118,16 @@ public class PlayerHealth : MonoBehaviour
             transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             transform.GetChild(2).GetChild(0).GetComponent<TextMeshPro>().color = Color.white;
         }
+    }
+
+    public void DelayedDetox(float amount)
+    {
+        StartCoroutine(Delayed(amount));
+    }
+
+    IEnumerator Delayed(float amount)
+    {
+        yield return new WaitForSeconds(2f);
+        ChangeDOT(amount);
     }
 }

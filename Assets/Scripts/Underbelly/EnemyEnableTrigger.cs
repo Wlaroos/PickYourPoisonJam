@@ -8,6 +8,7 @@ public class EnemyEnableTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(!_enableRef.active)
         _enableRef.SetActive(true);
     }
 }
