@@ -19335,6 +19335,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Essence collected. Successfully escaped.
       objectReference: {fileID: 0}
+    - target: {fileID: 2037878670762154919, guid: 46b5bf3d50048604eae79fc8ad520610, type: 3}
+      propertyPath: m_Spacing
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 2037878670839291091, guid: 46b5bf3d50048604eae79fc8ad520610, type: 3}
       propertyPath: m_text
       value: Objective complete.
@@ -19442,6 +19446,10 @@ PrefabInstance:
     - target: {fileID: 2037878671604140783, guid: 46b5bf3d50048604eae79fc8ad520610, type: 3}
       propertyPath: m_Name
       value: cnvs_WinLose
+      objectReference: {fileID: 0}
+    - target: {fileID: 2037878671673539384, guid: 46b5bf3d50048604eae79fc8ad520610, type: 3}
+      propertyPath: m_Spacing
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 2037878672347626140, guid: 46b5bf3d50048604eae79fc8ad520610, type: 3}
       propertyPath: m_text
